@@ -1,0 +1,20 @@
+name: "行動力量表"
+navbar:
+  title: "行動力量表"
+  right:
+    - text: ""
+    - icon: fa-github
+      href: "https://github.com/liao961120/psytesting"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "Widget"
+      href: widget_test.html
+
+output:
+  html_document:
+    theme: default
+    include:
+      after_body: footer.html
+    css: style.css
+output_dir: "../_site"

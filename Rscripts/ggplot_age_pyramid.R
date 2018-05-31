@@ -45,4 +45,4 @@ ggplot(aes(x = age_group, fill = gender,
   theme_minimal()+
     theme(axis.text.x = element_text(size=15))
 
-gganimate(pl, ,ani.width=800, ani.height=350, "~/local_depend/GitHubPage/lang_social_survey/age_pyramid.gif")
+gganimate(pl, ,ani.width=800, ani.height=350, "~/twLangSurvey/out_graph/age_pyramid.gif")

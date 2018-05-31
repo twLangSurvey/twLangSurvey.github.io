@@ -1,0 +1,22 @@
+---
+title: "Grid System"
+---
+
+```{r setup, include=FALSE}
+library(svglite)
+knitr::opts_knit$set(root.dir='..')
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE,
+	dev='svg', comment=""
+	# fig.dim = c(3.5, 3.5)  # (width, height)
+)
+library(knitr)
+library(kableExtra)
+htmlwidgets::sizingPolicy(
+    browser.fill=TRUE
+)
+source("bootstrap_fc.R")
+```
+
