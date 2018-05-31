@@ -1,0 +1,26 @@
+language: r
+cache: packages
+dist: trusty
+sudo: required
+pandoc_version: 1.19.2.1
+before_install:
+  - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes
+  - sudo add-apt-repository ppa:opencpu/jq --yes
+  - sudo apt-get --yes --force-yes update -qq
+  - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev libv8-dev
+- sudo apt-get install --yes libjq-dev libprotobuf-dev libprotoc-dev protobuf-compiler    
+
+
+script:
+  - Rscript -e 'bookdown::render_book("index.Rmd", "bookdown::gitbook")'
+
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  keep-history: true
+  local-dir: docs # Book output directory
+  on:
+branch: master
+

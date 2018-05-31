@@ -1,0 +1,7 @@
+"0","animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),"
+"0","        movie.name = ""plot.gif"", img.name = ""plott"","
+"0","        ani.dev = function(...){png(res=130*1.2,...)})"
+"1","[1]"
+"1"," TRUE"
+"1","
+"

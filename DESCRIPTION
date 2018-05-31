@@ -1,0 +1,30 @@
+Package: placeholder
+Type: Book
+Title: Does not matter.
+Version: 0.0.1
+Imports: 
+	tmaptools (>= 2.0),
+    sf (>= 0.6-0),
+    units (>= 0.5-1),
+    raster (>= 2.5-2),
+    grid,
+    rgdal,
+    rgeos,
+    RColorBrewer,
+    viridisLite,
+    classInt,
+    spdep,
+    htmltools,
+    htmlwidgets,
+    leaflet (>= 1.1.0),
+    mapview,
+	stats,
+	tidyverse, 
+	kableExtra, 
+	animation, 
+	base64enc, 
+	htmltools, 
+	withr, 
+	plyr
+Remotes: dgrtwo/gganimate
+
