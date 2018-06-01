@@ -4,11 +4,20 @@ exclude: ["animate.Rmd", "*.csv"]
 navbar:
   title: "臺灣語言調查"
   right:
-    - text: ""
     - icon: fa-github
       href: "https://github.com/twLangSurvey/main"
+    - icon: fa-share-alt
+      menu:
+        - icon: fa-facebook-square
+          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/"
+        - icon: fa-google-plus
+          href: "https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/main/"
+        - icon: fa-twitter
+          href: "https://twitter.com/home?status=https%3A//twlangsurvey.github.io/main/"
+        - icon: fa-linkedin
+          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/"
   left:
-    - text: "Home"
+    - icon: fa-home
       href: index.html
 #    - text: "test"
 #      href: test.html
@@ -17,6 +26,7 @@ output:
   html_document:
     theme: default
     include:
+      in_header: header.html
       after_body: footer.html
     css: style.css
 output_dir: "../docs"
