@@ -1,8 +1,8 @@
-name: "臺灣語言調查"
+name: "臺灣語言使用調查"
 #include: ["import.R"]
 exclude: ["animate.Rmd", "*.csv"]
 navbar:
-  title: "臺灣語言調查"
+  title: "臺灣語言使用調查"
   right:
     - icon: fa-github
       href: "https://github.com/twLangSurvey/main"

@@ -23,6 +23,7 @@ Imports:
     htmlwidgets,
     kableExtra,
     bookdown,
-    geosphere
+    geosphere,
+    showtext
 Remotes: dgrtwo/gganimate
 

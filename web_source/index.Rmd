@@ -1,5 +1,5 @@
 ---
-title: "臺灣語言調查"
+title: ""
 ---
 
 ```{r setup, include=FALSE}
