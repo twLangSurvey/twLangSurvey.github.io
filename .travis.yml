@@ -9,10 +9,7 @@ before_install:
   - sudo apt-get --yes --force-yes update -qq
   - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev libv8-dev
   - sudo apt-get install --yes libjq-dev libprotobuf-dev libprotoc-dev protobuf-compiler
-  - sudo mkdir /usr/share/fonts/truetype/PFR
-  - sudo cp PFR.ttf /usr/share/fonts/truetype/PFR
-  - sudo chmod 755 /usr/share/fonts/truetype/PFR/PFR.ttf
-  - fc-cache
+
 script:
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")'
 
