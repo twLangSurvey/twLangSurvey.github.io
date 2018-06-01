@@ -1,10 +1,10 @@
-name: "行動力量表"
+name: "臺灣語言調查"
 navbar:
-  title: "行動力量表"
+  title: "臺灣語言調查"
   right:
     - text: ""
     - icon: fa-github
-      href: "https://github.com/liao961120/psytesting"
+      href: "https://github.com/twLangSurvey/main"
   left:
     - text: "Home"
       href: index.html
@@ -17,4 +17,4 @@ output:
     include:
       after_body: footer.html
     css: style.css
-output_dir: "../_site"
+output_dir: "../docs"
