@@ -1,4 +1,6 @@
 name: "臺灣語言調查"
+#include: ["import.R"]
+exclude: ["animate.Rmd", "*.csv"]
 navbar:
   title: "臺灣語言調查"
   right:
@@ -8,8 +10,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "Widget"
-      href: widget_test.html
+    - text: "test"
+      href: test.html
 
 output:
   html_document:
@@ -18,3 +20,4 @@ output:
       after_body: footer.html
     css: style.css
 output_dir: "../docs"
+

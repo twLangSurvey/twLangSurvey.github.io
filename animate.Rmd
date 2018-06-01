@@ -19,17 +19,13 @@ source("shape.R")
 ```
 
 
-```{r include=FALSE}
-animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),
-        movie.name = "plot.gif", img.name = "plott",
-        ani.dev = function(...){png(res=130*1.2,...)})
-```
+
 
 ```{r, fig.width=8}
-knitr::include_graphics("plot.gif")
+knitr::include_graphics("./out_graph/plot.gif")
 ```
 
 ```{r}
-knitr::include_graphics("age_pyramid.gif")
+knitr::include_graphics("./out_graph/age_pyramid.gif")
 ```
 
