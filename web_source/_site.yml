@@ -10,8 +10,8 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-    - text: "test"
-      href: test.html
+#    - text: "test"
+#      href: test.html
 
 output:
   html_document:
