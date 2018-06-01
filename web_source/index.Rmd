@@ -14,9 +14,6 @@ knitr::opts_chunk$set(
 knitr::opts_knit$set(root.dir='../rscript')
 ```
 
-```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
-source("./shape.R")
-```
 
 ```{r}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
@@ -27,4 +24,11 @@ knitr::include_graphics("./out_graph/taiwan_sp.gif")
 knitr::include_graphics("./out_graph/age_pyramid.gif")
 ```
 
+```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
+source("tmap.R")
+```
+
+```{r}
+map
+```
 
