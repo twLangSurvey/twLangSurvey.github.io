@@ -12,8 +12,14 @@ knitr::opts_chunk$set(
 	dev='svg', comment="")
 	# fig.dim = c(3.5, 3.5)  # (width, height)
 knitr::opts_knit$set(root.dir='../rscript')
+Sys.setenv(TZ="Asia/Taipei")
 ```
 
+<div style="text-align: right">
+<p style="font-size:6px">
+上次更新：`r Sys.time()`
+</p>
+</div>
 
 ```{r}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
