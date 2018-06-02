@@ -14,7 +14,7 @@ before_install:
   - sudo mkdir /usr/share/fonts/truetype/noto
   - sudo cp ./NotoSansCJKtc.otf /usr/share/fonts/truetype/noto
   - sudo chmod 755 /usr/share/fonts/truetype/noto/NotoSansCJKtc.otf
-  - fa-cache
+  - fc-cache
 
 script:
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")'
