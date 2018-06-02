@@ -9,6 +9,12 @@ before_install:
   - sudo apt-get --yes --force-yes update -qq
   - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev libv8-dev
   - sudo apt-get install --yes libjq-dev libprotobuf-dev libprotoc-dev protobuf-compiler
+  - sudo apt-get install language-pack-zh*
+  - sudo apt-get install chinese*
+  - sudo mkdir /usr/share/fonts/truetype/noto
+  - sudo cp ./NotoSansCJKtc.otf /usr/share/fonts/truetype/noto
+  - sudo chmod 755 /usr/share/fonts/truetype/noto/NotoSansCJKtc.otf
+  - fa-cache
 
 script:
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")'
