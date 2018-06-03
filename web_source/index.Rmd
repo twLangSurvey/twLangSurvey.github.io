@@ -35,6 +35,7 @@ source("tmap.R")
 ```
 
 ```{r}
+tmap_mode("view")
 map
 ```
 
