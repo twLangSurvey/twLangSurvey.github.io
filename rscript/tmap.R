@@ -16,6 +16,6 @@ source("shape.R")
 map <- tm_shape(sp) + 
     tm_polygons(col="COUNTYNAME") +
     tm_layout(title = "臺灣鄉鎮市區",
-              bg.color = "grey85",
+              bg.color = "transparent", #grey85
               frame = FALSE,
               fontfamily = "Noto Sans CJK TC")

@@ -13,19 +13,21 @@ sp <- st_read("./shape/TOWN_MOI_1070330.shp")
 
 sp <- sp %>% 
     left_join(zip, by = c("COUNTYNAME","TOWNNAME")) %>%
-    select(COUNTYNAME, TOWNNAME, ZIPCODE)
+    select(COUNTYNAME, TOWNNAME, TOWNENG, ZIPCODE)
 
-animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),
-        movie.name = "../web_source/out_graph/taiwan_sp.gif", img.name = "plott",
-        ani.dev = function(...){png(res=130*1.2,...)})
-
-
+#animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),
+#        movie.name = "../web_source/out_graph/taiwan_sp.gif", img.name = "plott",
+#        ani.dev = function(...){png(res=130*1.2,...)})
 
 
 
-#png(filename = "taiwan.png",width = 512, height = 512, units = "px", pointsize = 1,bg = "transparent", type = "cairo", res=300)
+
+
+#png(filename = "taiwan.png",width = 512, height = 512, units = "px", pointsize = 1,bg = "transparent", type = "cairo", res=600)
 #svg(file = "taiwan.svg", width = 12, height = 12, onefile = TRUE,bg = "transparent")
-#library(maps)
-#map("world", fill=TRUE, col="white", bg="transparent", ylim=c(20, 26),xlim=c(120, 124), mar=c(0,0,0,0))
-#plot(sp[,-(1:3)])
+#library(tmap)
+#map <- tm_shape(sp) + tm_fill(col = "grey")+tm_layout(bg.color = "transparent",frame=F,inner.margins=0)
+
+#save_tmap(map, filename = "taiwan.png",width = 900)
+
 #dev.off() 
