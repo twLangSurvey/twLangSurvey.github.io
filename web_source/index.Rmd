@@ -9,14 +9,18 @@ knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
 	warning = FALSE,
-	dev='svg', comment="")
+	dev='svglite', comment="")
 	# fig.dim = c(3.5, 3.5)  # (width, height)
 knitr::opts_knit$set(root.dir='../rscript')
 Sys.setenv(TZ="Asia/Taipei")
+library(widgetframe)
+knitr::opts_chunk$set(widgetframe_self_contained = FALSE) 
+knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE) 
+knitr::opts_chunk$set(widgetframe_widgets_dir = '../web_source/interactive_graph' )
 ```
 
 <div style="text-align: right">
-<p style="font-size:6px">
+<p style="font-size:8px">
 上次更新：`r Sys.time()`
 </p>
 </div>
@@ -35,7 +39,13 @@ source("tmap.R")
 ```
 
 ```{r}
-tmap_mode("view")
-map
+#tmap_mode("view")
+frameWidget(tmap_leaflet(map), width='85%')
 ```
 
+
+  
+  
+<br>
+  
+  
