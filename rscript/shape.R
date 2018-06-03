@@ -1,6 +1,7 @@
 library(sf)
 library(dplyr)
 library(readr)
+library(tidyr)
 
 ##### Extract zipcode from TOWN_zip.kml in order to combine to shp ####
 # the extracted df is saved to ./data/zipcode_towncode.csv #
@@ -15,11 +16,23 @@ sp <- sp %>%
     left_join(zip, by = c("COUNTYNAME","TOWNNAME")) %>%
     select(COUNTYNAME, TOWNNAME, TOWNENG, ZIPCODE)
 
+sp2 <- sp %>%
+    mutate(lang1 = sample(0:5, 368,replace = T),
+           lang2 = sample(0:5, 368,replace = T)
+           ) %>%
+    gather(key="lang_type", value = "fluency",
+           lang1, lang2)
+library(tmap)
+ani_tmap <- tm_shape(sp2)+ 
+    tm_fill("fluency")+
+    tm_facets(by = "lang_type", free.coords = T, nrow = 1, ncol = 1)
+
+tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", delay = 70, width = 1000)
+#read https://github.com/Robinlovelace/geocompr/blob/master/code/09-urban-animation.R
+
 #animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),
 #        movie.name = "../web_source/out_graph/taiwan_sp.gif", img.name = "plott",
 #        ani.dev = function(...){png(res=130*1.2,...)})
-
-
 
 
 

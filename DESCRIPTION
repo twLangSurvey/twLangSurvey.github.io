@@ -9,9 +9,11 @@ Imports:
     sp,
     raster,
     grid,
+    ggmap,
     rgdal,
     rgeos,
     RColorBrewer,
+    lwgeom,
     leaflet,
     mapview,
     animation,
@@ -26,5 +28,11 @@ Imports:
     geosphere,
     showtext,
     widgetframe
-Remotes: dgrtwo/gganimate
+Remotes:
+    mtennekes/tmap,
+    mtennekes/tmaptools,
+    dgrtwo/gganimate,
+    tidyverse/ggplot2,
+    sjewo/cartogram,
+    jannes-m/RQGIS
 
