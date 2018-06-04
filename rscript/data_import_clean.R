@@ -51,7 +51,8 @@ survey$date <- survey$date %>%
 
 survey <- survey %>%
     mutate(birth_year = year(Sys.Date()) - as.numeric(birth_year)) %>%
-    rename(age = birth_year)
+    rename(age = birth_year) %>%
+    mutate(curr_resid_since = curr_resid_since %>% as.integer())
 
 ###### Save cleaned data #######
 readr::write_rds(survey, "./data/survey.rds")

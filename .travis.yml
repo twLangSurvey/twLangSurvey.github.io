@@ -17,10 +17,10 @@ before_install:
   - fc-cache                                                            # install Chinese font NotoSansCJK TC
 
 script:
-  - Rscript ./rscript/data_import_clean.R
+  - Rscript -e 'setwd("./rscript/"); source("./data_import_clean.R")'
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")' # render website
-  - cp -r ./rscript/interactive_graph/ ./docs # deal with dir structure problem caused by 'widgetframe'
-  - cp -r ./rscript/data/ ./docs              # To make autorefreshing data available to public
+  - cp -r ./rscript/interactive_graph/ ./docs  # deal with dir structure problem caused by 'widgetframe'
+  - cp -r ./rscript/data/ ./docs               # To make autorefreshing data available to the public
 
 # deplot docs/ to branch 'gh-pages'
 deploy:
