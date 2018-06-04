@@ -1,0 +1,14 @@
+---
+title: "取得資料"
+---
+
+<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
+<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a>
+透過[臺灣地區語言使用調查問卷](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform?usp=sf_link)所收集的資料，以 [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW) 條款開放至公眾領域。
+
+您可直接取得[原始資料](https://docs.google.com/spreadsheets/d/1JM9eqIiWt4uTa7CXKdYsSyXJIPKTpk_fVGSdK0O4gys/edit?usp=sharing)，或至[GitHub](https://github.com/twLangSurvey/main/tree/master/rscript/data)查看整理過後的資料：
+- [下載 csv](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/twLangSurvey/main/tree/master/rscript/data/survey.csv)
+- [下載 rds](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/twLangSurvey/main/tree/master/rscript/data/survey.rds)（R 使用者可用 rds 檔，其保存了各變項的資料類別）
+- [變項名稱中文對照](https://docs.google.com/spreadsheets/d/1NbalBJPAPIzGwpVDI9fTf0q8GpCBWhVep_9aD5uQKy4/edit?usp=sharing)  
+**注意**：此檔案第三列的"**birth_year**"在整理過後的`csv`和`rds`檔中已更改為**年齡**；所有**六點量尺的題目**（語言能力）的量尺分數由 1-6 轉換成 0-5。
+
