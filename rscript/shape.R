@@ -2,7 +2,7 @@ library(sf)
 library(dplyr)
 library(readr)
 library(tidyr)
-
+library(tmap)
 ##### Extract zipcode from TOWN_zip.kml in order to combine to shp ####
 # the extracted df is saved to ./data/zipcode_towncode.csv #
 
@@ -22,7 +22,7 @@ sp2 <- sp %>%
            ) %>%
     gather(key="lang_type", value = "fluency",
            lang1, lang2)
-library(tmap)
+
 ani_tmap <- tm_shape(sp2)+ 
     tm_fill("fluency")+
     tm_facets(by = "lang_type", free.coords = T, nrow = 1, ncol = 1)

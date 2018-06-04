@@ -3,7 +3,7 @@ Type: Website
 Title: Does not matter.
 Version: 0.0.1
 Imports:
-    tmap,
+    tmap (>= 2.0),
     tmaptools (>= 2.0),
     sf,
     sp,

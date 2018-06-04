@@ -25,7 +25,7 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = '../web_source/interactive_graph
 </p>
 </div>
 
-```{r}
+```{r out.width="70%"}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
 ```
 
