@@ -14,11 +14,13 @@ before_install:
   - sudo mkdir /usr/share/fonts/truetype/noto                           # install Chinese font NotoSansCJK TC
   - sudo cp ./NotoSansCJKtc.otf /usr/share/fonts/truetype/noto          # install Chinese font NotoSansCJK TC
   - sudo chmod 755 /usr/share/fonts/truetype/noto/NotoSansCJKtc.otf     # install Chinese font NotoSansCJK TC
-  - fc-cache
+  - fc-cache                                                            # install Chinese font NotoSansCJK TC
 
 script:
+  - Rscript ./rscript/data_import_clean.R
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")' # render website
   - cp -r ./rscript/interactive_graph/ ./docs # deal with dir structure problem caused by 'widgetframe'
+  - cp -r ./rscript/data/ ./docs              # To make autorefreshing data available to public
 
 # deplot docs/ to branch 'gh-pages'
 deploy:
@@ -26,6 +28,6 @@ deploy:
   skip-cleanup: true
   github-token: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure
   keep-history: true
-  local-dir: docs # Web output directory
+  local-dir: docs          # Web output directory
   on:
     branch: master

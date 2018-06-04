@@ -5,6 +5,8 @@ exclude:
 navbar:
   title: 臺灣語言使用調查
   right:
+  - text: "資料專區"
+    href: advanced.html
   - icon: fa-github
     href: https://github.com/twLangSurvey/main
   - icon: fa-share-alt
@@ -20,8 +22,6 @@ navbar:
   left:
   - icon: fa-home
     href: index.html
-  - text: "資料專區"
-    href: advanced.html
 output:
   html_document:
     theme: default

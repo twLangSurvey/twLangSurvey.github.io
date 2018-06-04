@@ -46,6 +46,4 @@ frameWidget(tmap_leaflet(map), width='85%')
 
   
   
-<br>
-  
-  
+<br><br><br><br><br><br><br>
