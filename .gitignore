@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 docs/
-interactive_graph/ #ignore interactive plot output in rscript. It's a workaround of the dir structure problem.
+interactive_graph/ 
+#ignore interactive plot output in rscript. It's a workaround of the dir structure problem.
