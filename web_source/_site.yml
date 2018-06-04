@@ -1,27 +1,25 @@
-name: "臺灣語言使用調查"
-#include: ["import.R"]
-exclude: ["animate.Rmd", "*.csv"]
+name: 臺灣語言使用調查
+exclude:
+- animate.Rmd
+- '*.csv'
 navbar:
-  title: "臺灣語言使用調查"
+  title: 臺灣語言使用調查
   right:
-    - icon: fa-github
-      href: "https://github.com/twLangSurvey/main"
-    - icon: fa-share-alt
-      menu:
-        - icon: fa-facebook-square
-          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/"
-        - icon: fa-google-plus
-          href: "https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/main/"
-        - icon: fa-twitter
-          href: "https://twitter.com/home?status=https%3A//twlangsurvey.github.io/main/"
-        - icon: fa-linkedin
-          href: "https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/"
+  - icon: fa-github
+    href: https://github.com/twLangSurvey/main
+  - icon: fa-share-alt
+    menu:
+    - icon: fa-facebook-square
+      href: https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/
+    - icon: fa-google-plus
+      href: https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/main/
+    - icon: fa-twitter
+      href: https://twitter.com/home?status=https%3A//twlangsurvey.github.io/main/
+    - icon: fa-linkedin
+      href: https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/
   left:
-    - icon: fa-home
-      href: index.html
-#    - text: "test"
-#      href: test.html
-
+  - icon: fa-home
+    href: index.html
 output:
   html_document:
     theme: default
@@ -29,5 +27,7 @@ output:
       in_header: header.html
       after_body: footer.html
     css: style.css
-output_dir: "../docs"
+    lib_dir: site_libs
+    self_contained: no
+output_dir: ../docs
 

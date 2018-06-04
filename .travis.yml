@@ -18,6 +18,7 @@ before_install:
 
 script:
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")'
+  - cp -r ./rscript/interactive_graph/ ./docs # deal with dir structure problem caused by 'widgetframe'
 
 deploy:
   provider: pages

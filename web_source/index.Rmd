@@ -16,7 +16,7 @@ Sys.setenv(TZ="Asia/Taipei")
 library(widgetframe)
 knitr::opts_chunk$set(widgetframe_self_contained = FALSE) 
 knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE) 
-knitr::opts_chunk$set(widgetframe_widgets_dir = '../web_source/interactive_graph' )
+knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 ```
 
 <div style="text-align: right">
