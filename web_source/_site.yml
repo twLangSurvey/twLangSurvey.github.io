@@ -20,6 +20,8 @@ navbar:
   left:
   - icon: fa-home
     href: index.html
+  - text: "資料專區"
+    href: advanced.html
 output:
   html_document:
     theme: default
