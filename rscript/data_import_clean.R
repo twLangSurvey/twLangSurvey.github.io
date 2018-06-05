@@ -1,6 +1,8 @@
 library(magrittr)
 library(dplyr)
 library(tidyr)
+library(lubridate)
+library(purrr)
 
 ###### Read Data From google sheet ######
 survey <- readr::read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTpvHc3j0uVHckg-BVFTfCZsQb9f9HsqxR3OM7fzRQ-CvW-bKWNU7mNk30IrHbj_8G7zeTd5fi7CN5a/pub?output=csv", col_names = T)
@@ -36,13 +38,16 @@ survey <- survey %>%
 
 ###### Recode lang ability ######
 ## Convert points 1-6 to points 0-5 ##
-survey[,c(15:26,37:47)] <- 
-    sapply(survey[,c(15:26,37:47)], 
-           function(x) as.numeric(x)-1
-           )
+
+index <- which(survey[1,] %in% 1:6) # find columns with likert scales (6 points) 
+
+sub_1_likert <- function(x) as.numeric(x)-1
+
+survey[, index] <- 
+    survey[, index] %>%
+    map(sub_1_likert)
 
 ###### Mutate columns ######
-library(lubridate)
 
 survey$date <- survey$date %>% 
     strptime("%m/%d/%Y %H:%M:%S",
