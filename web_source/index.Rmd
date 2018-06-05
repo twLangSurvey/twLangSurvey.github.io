@@ -9,7 +9,7 @@ knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
 	warning = FALSE,
-	dev='svglite', comment="")
+	dev='svg', comment="")
 	# fig.dim = c(3.5, 3.5)  # (width, height)
 knitr::opts_knit$set(root.dir='../rscript')
 Sys.setenv(TZ="Asia/Taipei")
@@ -21,11 +21,11 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 
 <div style="text-align: right">
 <p style="font-size:8px">
-上次更新：`r Sys.time()`
+上次更新：`r Sys.Date()`
 </p>
 </div>
 
-```{r out.width="70%"}
+```{r out.width="60%", fig.width=6}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
 ```
 
@@ -43,7 +43,11 @@ source("tmap.R")
 frameWidget(tmap_leaflet(map), width='85%')
 ```
 
+```{r age-diff-main-lang-bar}
+source("gen_diff_categorical.R", encoding = "utf-8")
+pl_Mand_crossgen_bar
+```
 
   
   
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>

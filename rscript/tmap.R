@@ -10,13 +10,11 @@ source("shape.R")
 
 #tm_shape(sp) + tm_fill(col="COUNTYNAME", title="臺灣各縣市")
 
-#showtext.auto(enable = TRUE)
-#font.add("NotoSansCJK", "NotoSansCJKtc.otf")
 
 map <- tm_shape(sp) + 
     tm_fill("COUNTYNAME") +
     tm_layout(title = "臺灣鄉鎮市區",
-              bg.color = NULL, #grey85
+              bg.color = "grey90", #grey85
               frame = FALSE,
               fontfamily = "Noto Sans CJK TC",
               legend.show=T,

@@ -25,6 +25,10 @@ sp2 <- sp %>%
 
 ani_tmap <- tm_shape(sp2)+ 
     tm_fill("fluency")+
+    tm_layout(bg.color = "grey90",
+              legend.position=c("right","top"),
+              legend.bg.color="white",
+              legend.bg.alpha=.7)+
     tm_facets(by = "lang_type", free.coords = T, nrow = 1, ncol = 1)
 
 tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", delay = 70, width = 1000)
