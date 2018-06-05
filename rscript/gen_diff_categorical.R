@@ -143,4 +143,4 @@ pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
 # tmaptools::get_brewer_pal("Dark2", n = 6)
 
 ggsave("../web_source/out_graph/Mand_usage_age_group.png",
-       plot = pl_Mand_crossgen_bar, width=250)
+       plot = pl_Mand_crossgen_bar, width=6, height = 3, dpi = 100)

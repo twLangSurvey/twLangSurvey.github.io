@@ -3,7 +3,6 @@ title: ""
 ---
 
 ```{r setup, include=FALSE}
-library(svglite)
 knitr::opts_knit$set(root.dir='..')
 knitr::opts_chunk$set(
 	echo = FALSE,

@@ -69,7 +69,7 @@ for (i in seq_along(age_group_idx)){
 
 
 
-pl <- ggplot(pl, aes(x = age_group,
+pl_ani_bar <- ggplot(pl, aes(x = age_group,
                      fill = gender,
                      y = ifelse(gender == "男",
                                 avg_fluency, -avg_fluency),
@@ -94,5 +94,5 @@ pl <- ggplot(pl, aes(x = age_group,
     theme(axis.text = element_text(size = 12),
           axis.title = element_text(size = 14))
 
-gganimate(pl, ani.width=800, ani.height=350, interval = 1,
+gganimate(pl_ani_bar, ani.width=800, ani.height=350, interval = 1,
           filename="../web_source/out_graph/age_pyramid.gif")

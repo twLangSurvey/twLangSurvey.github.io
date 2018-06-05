@@ -25,9 +25,13 @@ tmap.R
     - Outputs: `pl_Mand_crossgen_bar`  
       ![](../web_source/out_graph/Mand_usage_age_group.png)
 
+- `animated_bar.R`
+    - Inputs: `./data/survey.rds`
+    - Outputs: `age_pyramid.gif`  
+      ![](../web_source/out_graph/age_pyramid.gif)
 
 ### Other Scripts (Not relevant to building the web)
-- `ggplot_age_pyramid.R`: Experiment with animated bar plot.
+- `./archives/ggplot_age_pyramid.R`: Experiment with animated bar plot.
 - `shape.R`: Experiment with package 'sf' & shapefile I/O.
 - `tmap.R`: Experiment with package 'tmap' for map making.
 - `techniques.R`: Playing around.
