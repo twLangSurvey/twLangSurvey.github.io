@@ -4,6 +4,7 @@
 data/
 interactive_graph/
 shape/
+archives/
 
 data_import_clean.R
 
@@ -14,10 +15,16 @@ tmap.R
 ```
 
 ### Analysis Scripts
-- `data_import_clean.R`  
-Inputs: From web  
-Outputs: `./data/survey.rds`, `./data/survey.csv`  
-Description: Read data from googlesheets, clean data for further analysis.
+- `data_import_clean.R`
+    - Inputs: From web
+    - Outputs: `./data/survey.rds`, `./data/survey.csv`  
+    - Description: Read data from googlesheets, clean data for further analysis.
+
+- `gen_diff_categorical.R`
+    - Inputs: `./data/survey.rds`
+    - Outputs: `pl_Mand_crossgen_bar`  
+      ![](../web_source/out_graph/Mand_usage_age_group.png)
+
 
 ### Other Scripts (Not relevant to building the web)
 - `ggplot_age_pyramid.R`: Experiment with animated bar plot.

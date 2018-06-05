@@ -3,8 +3,6 @@ library(tidyr)
 library(magrittr)
 library(ggplot2)
 library(gganimate)
-theme_set(theme_bw())
-
 
 df <- data.frame(
     gender = sample(c("男","女"), 100, replace = T),
@@ -45,4 +43,4 @@ ggplot(aes(x = age_group, fill = gender,
   theme_minimal()+
     theme(axis.text.x = element_text(size=15))
 
-gganimate(pl, ani.width=800, ani.height=350, filename="../web_source/out_graph/age_pyramid.gif")
+#gganimate(pl, ani.width=800, ani.height=350, filename="../web_source/out_graph/age_pyramid.gif")
