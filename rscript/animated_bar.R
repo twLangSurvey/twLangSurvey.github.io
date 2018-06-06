@@ -92,7 +92,12 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
     labs(x="年齡層", y="流利程度", fill = "性別") +
     theme_minimal() +
     theme(axis.text = element_text(size = 12),
-          axis.title = element_text(size = 14))
+          title = element_text(size = 14),
+          plot.title = element_text(size = 17,
+                               face="bold"),
+          legend.text = element_text(size = 13.5),
+          legend.justification = c("right", "top"))
 
-gganimate(pl_ani_bar, ani.width=800, ani.height=350, interval = 1,
+gganimate(pl_ani_bar, ani.width=800, 
+          ani.height=350, interval = 1,
           filename="../web_source/out_graph/age_pyramid.gif")

@@ -24,6 +24,11 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 </p>
 </div>
 
+```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
+#source("shape.R")
+source("tmap")
+```
+
 ```{r out.width="60%", fig.width=6}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
 ```
@@ -33,13 +38,10 @@ knitr::include_graphics("./out_graph/taiwan_sp.gif")
 knitr::include_graphics("./out_graph/age_pyramid.gif")
 ```
 
-```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
-source("tmap.R")
-```
 
-```{r}
+```{r include=FALSE}
 #tmap_mode("view")
-#frameWidget(tmap_leaflet(map), width='85%')
+frameWidget(tmap_leaflet(map), width='85%')
 ```
 
 ```{r age-diff-main-lang-bar}
