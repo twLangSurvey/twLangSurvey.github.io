@@ -26,6 +26,7 @@ Imports:
     kableExtra,
     bookdown,
     geosphere,
+    plotly,
     widgetframe
 Remotes:
     mtennekes/tmap,
