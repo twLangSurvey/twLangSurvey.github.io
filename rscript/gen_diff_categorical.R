@@ -103,7 +103,7 @@ rbind_df_PMand <- function(df) {
     list_df <- vector("list", g_num) # list for storing df's
     for (i in 1:g_num){
         list_df[[i]] <- 
-            P_Mand_as_main(df, c(min*i,min*i+4))
+            P_Mand_as_main(df, c(min+(i-1)*5,min+(i-1)*5+4))
     }
     df2 <- bind_rows(list_df) # rbind df's from the list
     attr(df2, 'g_num') <- g_num
