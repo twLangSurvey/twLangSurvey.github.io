@@ -25,8 +25,8 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 </div>
 
 ```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
-#source("shape.R")
-source("tmap")
+source("shape.R")
+#source("tmap.R")
 ```
 
 ```{r out.width="60%", fig.width=6}
@@ -41,7 +41,7 @@ knitr::include_graphics("./out_graph/age_pyramid.gif")
 
 ```{r include=FALSE}
 #tmap_mode("view")
-frameWidget(tmap_leaflet(map), width='85%')
+#frameWidget(tmap_leaflet(map), width='85%')
 ```
 
 ```{r age-diff-main-lang-bar}

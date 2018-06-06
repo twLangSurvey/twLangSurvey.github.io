@@ -17,6 +17,7 @@ before_install:
   - fc-cache                                                            # install Chinese font NotoSansCJK TC
 
 script:
+  - mkdir ./rscript/interactive_graph/
   - Rscript -e 'setwd("./rscript/"); source("./data_import_clean.R")'
   - Rscript -e 'devtools::install_github("dgrtwo/gganimate")'
   - Rscript -e 'setwd("./rscript/"); source("./animated_bar.R", encoding="utf-8")'
