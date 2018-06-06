@@ -115,7 +115,7 @@ colors <- tmaptools::get_brewer_pal("Dark2",  plot = F,
                                     n = 5)[c(2, 1, 4)]
 
 pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
-    gather(key = "subjects", value = "prob",-age_group) %>%
+    gather(key = "subjects", value = "prob") %>%
     ggplot(aes(x = age_group, y = prob)) +
     geom_bar(
         aes(fill = subjects),
