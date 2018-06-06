@@ -45,6 +45,5 @@ tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", del
 #library(tmap)
 #map <- tm_shape(sp) + tm_fill(col = "grey")+tm_layout(bg.color = "transparent",frame=F,inner.margins=0)
 
-#save_tmap(map, filename = "taiwan.png",width = 900)
 
 #dev.off() 

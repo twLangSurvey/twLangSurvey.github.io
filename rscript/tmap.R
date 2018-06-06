@@ -19,3 +19,4 @@ map <- tm_shape(sp) +
               fontfamily = "Noto Sans CJK TC",
               legend.show=T,
               legend.bg.alpha=.5)
+#ggplot(sp) _ geom_sf(aes(fill=colname))
