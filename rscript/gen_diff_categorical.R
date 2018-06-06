@@ -78,20 +78,19 @@ P_Mand_as_main <-
 ## age range in survey) and rbind all age_groups
 
 rbind_df_PMand <- function(df) {
-    min <- min(df$age)
-    max <- max(df$age)
-    
+    min <- min(df$age) + 0.001 # round(0.5) == 0
+    max <- max(df$age) + 0.001 # round(0.5001) == 1
     if (round(min/10) > min/10 && 
         round(max/10) > max/10) {# 5-9 in both min, max
         min <- floor(min/10)*10 + 5
         max <- floor(max/10)*10 + 9}
     else if (round(min/10) <= min/10 &&  # 0-4 in min
-              round(max/10) > max/10) {   # 5-9 in max
+              round(max/10) > max/10) {  # 5-9 in max
         min <- floor(min/10)*10
         max <- floor(max/10)*10 + 9        
     }
     else if (round(min/10) > min/10 &&   # 5-9 in min
-              round(max/10) <= max/10) {  # 0-4 in max
+              round(max/10) <= max/10) { # 0-4 in max
         min <- floor(min/10)*10 + 5
         max <- floor(max/10)*10 + 4
     }
@@ -106,7 +105,7 @@ rbind_df_PMand <- function(df) {
             P_Mand_as_main(df, c(min+(i-1)*5,min+(i-1)*5+4))
     }
     df2 <- bind_rows(list_df) # rbind df's from the list
-    attr(df2, 'g_num') <- g_num
+    attr(df2, 'g_num') <- c(g_num, max, min)
     df2
 }
 
@@ -115,7 +114,8 @@ colors <- tmaptools::get_brewer_pal("Dark2",  plot = F,
                                     n = 5)[c(2, 1, 4)]
 
 pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
-    gather(key = "subjects", value = "prob") %>%
+    gather(key = "subjects", value = "prob",
+           -age_group) %>%
     ggplot(aes(x = age_group, y = prob)) +
     geom_bar(
         aes(fill = subjects),

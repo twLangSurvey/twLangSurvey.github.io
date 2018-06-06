@@ -39,7 +39,7 @@ source("tmap.R")
 
 ```{r}
 #tmap_mode("view")
-frameWidget(tmap_leaflet(map), width='85%')
+#frameWidget(tmap_leaflet(map), width='85%')
 ```
 
 ```{r age-diff-main-lang-bar}

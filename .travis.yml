@@ -17,9 +17,8 @@ before_install:
   - fc-cache                                                            # install Chinese font NotoSansCJK TC
 
 script:
-  - Rscript -e 'devtools::install_github("dgrtwo/gganimate")'
   - Rscript -e 'setwd("./rscript/"); source("./data_import_clean.R")'
-  - Rscript -e 'setwd("./rscript/"); source("./gen_diff_categorical.R", encoding="utf-8")'
+  - Rscript -e 'devtools::install_github("dgrtwo/gganimate")'
   - Rscript -e 'setwd("./rscript/"); source("./animated_bar.R", encoding="utf-8")'
   - Rscript -e 'rmarkdown::render_site(input="./web_source", encoding = "UTF-8")' # render website
   - cp -r ./rscript/interactive_graph/ ./docs  # deal with dir structure problem caused by 'widgetframe'
