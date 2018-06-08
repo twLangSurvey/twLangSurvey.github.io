@@ -40,7 +40,6 @@ source("shape.R")
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
 ```
 </div>
-
 </div>
 
 ```{r}

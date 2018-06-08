@@ -26,9 +26,14 @@ tmap.R
       ![](../web_source/out_graph/Mand_usage_age_group.png)
 
 - `animated_bar.R`
-    - Inputs: `./data/survey.rds`
+    - Inputs: `./data/survey.rds`, `source("functions.R")`
     - Outputs: `age_pyramid.gif`  
       ![](../web_source/out_graph/age_pyramid.gif)
+
+- `cross_gen_lang_ability_ttest.R`
+    - Inputs: `./data/survey.rds`, `source("functions.R")`
+    - Outputs: `pl_full_diff`  
+      ![](../web_source/out_graph/cross_generation_lang_ability.png)
 
 ### Other Scripts (Not relevant to building the web)
 - `./archives/ggplot_age_pyramid.R`: Experiment with animated bar plot.

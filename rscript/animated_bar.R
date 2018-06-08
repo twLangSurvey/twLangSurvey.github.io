@@ -93,7 +93,7 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
           plot.title = element_text(size = 17,
                                face="bold"),
           legend.text = element_text(size = 13.5),
-          legend.justification = c("right", "top"))
+          legend.justification = c("right", "bottom"))
 
 gganimate(pl_ani_bar, ani.width=800, 
           ani.height=350, interval = 1,
