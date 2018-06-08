@@ -52,7 +52,8 @@ survey[, index] <-
 survey$date <- survey$date %>% 
     strptime("%m/%d/%Y %H:%M:%S",
              tz ="Asia/Taipei") %>% 
-    as_datetime(tz="Asia/Taipei")
+    as_datetime(tz="Asia/Taipei") %>%
+    as_date()
 
 survey <- survey %>%
     mutate(birth_year = year(Sys.Date()) - as.numeric(birth_year)) %>%

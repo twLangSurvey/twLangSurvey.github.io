@@ -113,9 +113,12 @@ rbind_df_PMand <- function(df) {
 colors <- tmaptools::get_brewer_pal("Dark2",  plot = F,
                                     n = 5)[c(2, 1, 4)]
 
+rev_age_group <- rbind_df_PMand(survey)$age_group %>%
+    unique() %>% rev()
 pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
     gather(key = "subjects", value = "prob",
            -age_group) %>%
+    arrange(desc(age_group)) %>%
     ggplot(aes(x = age_group, y = prob)) +
     geom_bar(
         aes(fill = subjects),
@@ -138,7 +141,9 @@ pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
         y = "比例",
         fill = "對話組合",
         title = expression(bold("華語") * "作為主要溝通語言之比例")
-    ) + theme_bw(base_size = 14) 
+    ) + #theme_bw(base_size = 14)+
+    theme_bw()+
+    scale_x_discrete(limits=rev_age_group)
 #tmaptools::palette_explorer()
 # tmaptools::get_brewer_pal("Dark2", n = 6)
 

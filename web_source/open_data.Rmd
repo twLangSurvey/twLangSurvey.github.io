@@ -4,8 +4,7 @@ title: "開放資料"
 
 <br>
 
-<a rel="license" href="http://creativecommons.org/publicdomain/zero/1.0/">
-<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" /></a>
+<img src="http://i.creativecommons.org/p/zero/1.0/88x31.png" style="border-style: none;" alt="CC0" />
 
 透過[臺灣語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform?usp=sf_link)問卷所收集的資料，以 [CC0 條款](https://creativecommons.org/publicdomain/zero/1.0/deed.zh_TW)開放至公眾領域。
 
