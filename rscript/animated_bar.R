@@ -95,6 +95,6 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
           legend.text = element_text(size = 13.5),
           legend.justification = c("right", "bottom"))
 
-gganimate(pl_ani_bar, ani.width=800, 
-          ani.height=350, interval = 1,
+gganimate(pl_ani_bar, ani.width=1000, 
+          ani.height=400, interval = 1,
           filename="../web_source/out_graph/age_pyramid.gif")
