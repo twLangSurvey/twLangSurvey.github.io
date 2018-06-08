@@ -24,15 +24,24 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 </p>
 </div>
 
+
 ```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
 source("shape.R")
 #source("tmap.R")
 ```
 
-```{r out.width="60%", fig.width=6}
+<div class="row">
+<div class="col-xs-6">
+一些文字一些文字一些文字一些文字一些文字一些文字一些文字一些文字一些文字
+</div>
+
+<div class="col-xs-6  col-md-4">
+```{r , fig.margin=TRUE}
 knitr::include_graphics("./out_graph/taiwan_sp.gif")
 ```
+</div>
 
+</div>
 
 ```{r}
 knitr::include_graphics("./out_graph/age_pyramid.gif")
@@ -50,8 +59,8 @@ source("cross_gen_lang_ability_ttest.R", encoding = "utf-8")
 
 ```{r age-diff-lang-ability, out.width="100%", fig.dim=c(7, 3.5)}
 pl_full_diff+
-    theme_define(legend_text=8, axis_size = 7,
-                 axis_title_size=10,
+    theme_define(legend_text=7.5, axis_size = 7,
+                 axis_title_size=11,
                  legend_posi = c("right", "bottom")
                  )
 ```
@@ -61,8 +70,8 @@ pl_full_diff+
 ```{r age-diff-main-lang-usage, fig.dim=c(7, 3.5)}
 source("gen_diff_categorical.R", encoding = "utf-8")
 pl_Mand_crossgen_bar+
-    theme_define(legend_text=8, axis_size = 7,
-                 axis_title_size=10,
+    theme_define(legend_text=8, axis_size = 8,
+                 axis_title_size=11,
                  legend_posi = c("right", "bottom")
                  )
 ```
