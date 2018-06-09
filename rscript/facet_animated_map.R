@@ -71,6 +71,6 @@ g1 = ggplot() +
          caption = expression(bold("原住民族語")*"以及"*bold("東南亞語言")*"因使用比例低，難以地圖呈現而省略")
     )
 
-gganimate::gganimate(g1, ani.width=1200,
+gganimate::gganimate(g1, ani.width=972,
           ani.height=1000, interval = 1.7,
           filename="../web_source/out_graph/animated_facet_map.gif")

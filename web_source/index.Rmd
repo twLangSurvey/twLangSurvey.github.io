@@ -16,6 +16,7 @@ library(widgetframe)
 knitr::opts_chunk$set(widgetframe_self_contained = FALSE) 
 knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE) 
 knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
+source("bootstrap_fc.R")
 ```
 
 <div style="text-align: right">
@@ -23,12 +24,6 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 上次更新：`r Sys.Date()`
 </p>
 </div>
-
-
-```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
-#source("shape.R")
-#source("tmap.R")
-```
 
 <div class="row">
 <div class="col-md-6">
@@ -39,6 +34,20 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 ```{r , fig.margin=TRUE}
 knitr::include_graphics("./out_graph/animated_facet_map.gif")
 ```
+
+```{r}
+button_bs("語言地圖", class = "default pull-right btn-xs", data_toggle = "modal", data_target = "#lang-map")
+
+# iframe for Google Form
+content <- HTML('
+此地圖顯示各語言(華語、閩南語、客家語、英語)在臺灣各地區的<b>通行程度</b>。每一格動畫地圖為一個<b>年齡層(5 歲)</b>，因此可以看見各地區<b>語言通行程度隨時間改變的動態</b>。
+<br><br>
+當一語言的<b>使用比例隨年齡層年輕而下降時</b>，代表該語言為<b>弱勢語言</b>，在當地正逐漸消失當中。
+')
+
+modal(id="lang-map", modal_header = "語言地圖", modal_body=content)
+```
+
 </div>
 </div>
 
