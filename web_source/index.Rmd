@@ -20,10 +20,24 @@ source("bootstrap_fc.R")
 ```
 
 <div style="text-align: right">
-<p style="font-size:8px">
+<p style="font-size:7.5px">
 上次更新：`r Sys.Date()`
 </p>
 </div>
+
+
+## 前言
+
+此網頁是為了[臺灣地區語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform)這份問卷而設計的。**臺灣地區語言使用調查**是為了解臺灣各語言的使用情況，特別是華語(國語)以外的弱勢語言；這個網頁則是為了將問卷的結果即時和大家分享，希望藉此引起大家對臺灣多語社會以及弱勢語言的關注。
+
+接下來將透過幾句簡短的文字、幾張簡潔的圖片[^opendata]描述臺灣語言的現況[^reliability]，並且會著重在**跨年齡層**以及**跨世代**的現象。
+
+
+[^opendata]: 對於不滿足於網頁所提供之資訊者，可至此網站[開放資料](./open_data.html)取得更多資訊。
+
+[^reliability]: 必須注意的是**網路問卷的侷限性**：此網頁所根據的網路問卷樣本可能過度集中在單一地區、身份或年齡層。因此，請讀者務必將此可能性記在心中。另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，才能說出更可信的故事。
+
+<br>
 
 <div class="row">
 <div class="col-md-6">
@@ -35,21 +49,28 @@ source("bootstrap_fc.R")
 knitr::include_graphics("./out_graph/animated_facet_map.gif")
 ```
 
-```{r}
+```{r lang-map-modal}
+##### Modal Trigger Button #####
 button_bs("語言地圖", class = "default pull-right btn-xs", data_toggle = "modal", data_target = "#lang-map")
 
-# iframe for Google Form
+###### Modal content #######
 content <- HTML('
 此地圖顯示各語言(華語、閩南語、客家語、英語)在臺灣各地區的<b>通行程度</b>。每一格動畫地圖為一個<b>年齡層(5 歲)</b>，因此可以看見各地區<b>語言通行程度隨時間改變的動態</b>。
 <br><br>
-當一語言的<b>使用比例隨年齡層年輕而下降時</b>，代表該語言為<b>弱勢語言</b>，在當地正逐漸消失當中。
+當懂某語言的人口<b>比例隨年齡層年輕而下降時</b>，代表該語言為<b>弱勢語言</b>，在當地正逐漸消失中。
+<br><br>
+
+這裡<b>懂某語言</b>的定義為：該語言口說能力在六點量尺為 4、5、或 6 分。
 ')
 
+###### Modal Definition ########
 modal(id="lang-map", modal_header = "語言地圖", modal_body=content)
 ```
+</div>
+</div>
+<br>
 
-</div>
-</div>
+
 
 ```{r}
 knitr::include_graphics("./out_graph/age_pyramid.gif")
