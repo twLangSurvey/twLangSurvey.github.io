@@ -26,16 +26,16 @@ knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 
 
 ```{r results='hide', message=FALSE, warning=FALSE, paged.print=FALSE}
-source("shape.R")
+#source("shape.R")
 #source("tmap.R")
 ```
 
 <div class="row">
-<div class="col-xs-6">
+<div class="col-md-6">
 一些文字一些文字一些文字一些文字一些文字一些文字一些文字一些文字一些文字
 </div>
 
-<div class="col-xs-6  col-md-4">
+<div class="col-md-6">
 ```{r , fig.margin=TRUE}
 knitr::include_graphics("./out_graph/animated_facet_map.gif")
 ```

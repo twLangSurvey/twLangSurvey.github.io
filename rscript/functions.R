@@ -79,7 +79,8 @@ recode_lang <- function(df, lang_col){
 ##### Ploting ######
 theme_define <- function(title =14, axis_size=12,
                   plot_title=14, sub_title=12,
-                  legend_text=13, axis_title_size=14,
+                  legend_text=13, legend_size=1.0,
+                  axis_title_size=14,
                   legend_posi = c("right", "top")){
     theme(title = element_text(size = title),
           axis.title = element_text(size = axis_size),
@@ -88,5 +89,6 @@ theme_define <- function(title =14, axis_size=12,
                                face="bold"),
           plot.subtitle = element_text(size = sub_title),
           legend.text = element_text(size = legend_text),
-          legend.justification = legend_posi)
+          legend.justification = legend_posi,
+          legend.key = element_rect(size = legend_size))
 }
