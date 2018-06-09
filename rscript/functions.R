@@ -81,14 +81,17 @@ theme_define <- function(title =14, axis_size=12,
                   plot_title=14, sub_title=12,
                   legend_text=13, legend_size=1.0,
                   axis_title_size=14,
-                  legend_posi = c("right", "top")){
+                  legend_anchor = 'top',
+                  legend_posi='right'){
     theme(title = element_text(size = title),
-          axis.title = element_text(size = axis_size),
+          axis.title = element_text(size = axis_title_size),
           axis.text = element_text(size = axis_size),
           plot.title = element_text(size = plot_title,
-                               face="bold"),
+                               face='bold'),
           plot.subtitle = element_text(size = sub_title),
           legend.text = element_text(size = legend_text),
-          legend.justification = legend_posi,
+          legend.justification = legend_anchor,
+          legend.position = legend_posi,
           legend.key = element_rect(size = legend_size))
 }
+

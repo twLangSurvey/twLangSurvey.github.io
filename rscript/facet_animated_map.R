@@ -53,23 +53,24 @@ g1 = ggplot() +
     geom_sf(data = survey_sp, aes(fill = `mean(know)`,
                            frame = age_group),
             colour=NA) +
-    scale_x_continuous(limits = c(118.4, 123),
+    scale_x_continuous(limits = c(118.4, 123),#c(118.4, 123),
                        breaks = 0)+
-    scale_y_continuous(limits = c(21.8, 25.5),
+    scale_y_continuous(limits = c(21.65, 26.22),#c(21.8, 25.4),
                        breaks = 0) +
     scale_fill_gradient(low=c[1], high=c[6])+
     facet_wrap( ~ lang ,ncol=2, strip.position="top")+
-    theme(strip.text.x = element_text(size = 20),
-          title = element_text(size = 25),
-          plot.caption = element_text(size = 18))+
-    theme_define(plot_title = 30,legend_size=4.0,
-                 legend_text = 20)+
-    labs(fill="懂該語言之人口比例",
+    theme(strip.text.x = element_text(size = 25, face = 'bold'),
+          legend.title = element_text(size = 22),
+          plot.caption = element_text(size = 22))+
+    theme_define(plot_title = 35, legend_size=4.0,
+                 legend_text = 20,
+                 legend_posi = 'left',
+                 legend_anchor = 'top')+
+    labs(fill="懂該語言之比例",
          title = "年齡層：",
-         subtitle="各地各語言人口比例 (按年齡層變動)",
-         caption = expression(bold("原住民族語")*"以及"*bold("東南亞語言")*"因使用比例低，難以地圖方式呈現而省略")
+         caption = expression(bold("原住民族語")*"以及"*bold("東南亞語言")*"因使用比例低，難以地圖呈現而省略")
     )
 
 gganimate::gganimate(g1, ani.width=1200,
-          ani.height=1000, interval = 1,
+          ani.height=1000, interval = 1.7,
           filename="../web_source/out_graph/animated_facet_map.gif")
