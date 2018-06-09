@@ -48,6 +48,6 @@ g1 = ggplot() +
     scale_fill_gradient(low=c[1], high=c[6])+
     facet_grid(lang ~ .)
 
-gganimate::gganimate(g1, ani.width=500, 
-          ani.height=2000, interval = 1,
+gganimate::gganimate(g1, ani.width=800, 
+          ani.height=3000, interval = 1,
           filename="../web_source/out_graph/animated_facet_map.gif")
