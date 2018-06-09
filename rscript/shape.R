@@ -18,25 +18,23 @@ sp <- sp %>%
 
 sp2 <- sp %>%
     mutate(lang1 = sample(0:5, 368,replace = T),
-           lang2 = sample(0:5, 368,replace = T)
-           ) %>%
+           lang2 = sample(0:5, 368,replace = T),
+           age = sample(seq(15,85,5),368,replace = T),
+           fill = 1) %>%
     gather(key="lang_type", value = "fluency",
            lang1, lang2)
 
-ani_tmap <- tm_shape(sp2)+ 
-    tm_fill("fluency")+
-    tm_layout(bg.color = "grey90",
-              legend.position=c("right","top"),
-              legend.bg.color="white",
-              legend.bg.alpha=.7)+
-    tm_facets(by = "lang_type", free.coords = T, nrow = 1, ncol = 1)
 
-tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", delay = 70, width = 1000)
+ani_tmap <- tm_shape(sp2)+
+    tm_fill()+
+    tm_style("grey")+
+    tm_shape(sp2)+
+    tm_fill("fluency") +
+    tm_facets(by = "lang_type", along="age", 
+              free.coords = F, nrow = 2, ncol = 1)
+
+tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", delay = 70, width = 300)
 #read https://github.com/Robinlovelace/geocompr/blob/master/code/09-urban-animation.R
-
-#animation::saveGIF(for (i in colnames(sp)[c(2,3)]) plot(sp[i]),
-#        movie.name = "../web_source/out_graph/taiwan_sp.gif", img.name = "plott",
-#        ani.dev = function(...){png(res=130*1.2,...)})
 
 
 

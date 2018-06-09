@@ -37,7 +37,7 @@ source("shape.R")
 
 <div class="col-xs-6  col-md-4">
 ```{r , fig.margin=TRUE}
-knitr::include_graphics("./out_graph/taiwan_sp.gif")
+knitr::include_graphics("./out_graph/animated_facet_map.gif")
 ```
 </div>
 </div>
