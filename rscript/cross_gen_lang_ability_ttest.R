@@ -122,7 +122,7 @@ pl_full_diff <- df_full %>%
     labs(y="語言能力差異",
          x="年齡層", color="",
          title="跨世代語言能力差異",
-         subtitle="子女 - 父母 (口說能力)",
-         caption = expression("語言能力差異為"*bold("負值")*"代表子女語言口說能力"*bold("較父親或母親差")))
+         subtitle="子女 - 父母 (口說能力)")
+#caption = expression("語言能力差異為"*bold("負值")*"代表子女語言口說能力"*bold("較父親或母親差"))
 
 ggsave("../web_source/out_graph/cross_generation_lang_ability.png", plot = pl_full_diff, width=6, height = 3, dpi = 100)

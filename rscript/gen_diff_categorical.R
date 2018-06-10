@@ -110,8 +110,7 @@ rbind_df_PMand <- function(df) {
 }
 
 #### Plot age_group bar plot ####
-colors <- tmaptools::get_brewer_pal("Dark2",  plot = F,
-                                    n = 5)[c(2, 1, 4)]
+colors <- scales::hue_pal()(3)
 
 rev_age_group <- rbind_df_PMand(survey)$age_group %>%
     unique() %>% rev()
@@ -127,14 +126,13 @@ pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
         position = "dodge",
         stat = "identity"
     ) +
-    scale_fill_manual(
-        values = colors,
-        breaks = c("dad_mom_main_lang",
-                   "me_dad_main_lang",
-                   "me_mom_main_lang"),
-        labels = c("父親、母親",
-                   "父親、自己",
-                   "母親、自己")
+    scale_fill_manual(values = c("#00BA38", "#619CFF", "#F8766D"),
+                      breaks = c("me_mom_main_lang",
+                                 "me_dad_main_lang",
+                                 "dad_mom_main_lang"),
+                      labels = c("母親、自己",
+                                 "父親、自己",
+                                 "父親、母親")
     ) +
     labs(
         x = "年齡層",
