@@ -5,7 +5,7 @@ library(tidyr)
 library(tmap)
 source("functions.R")
 
-zip <- read_csv("data/zipcode_towncode.csv", 
+zip <- read_csv("./data/zipcode_towncode.csv", 
     col_types = cols(ZIPCODE = col_character()))[,2:4]
 survey <- readr::read_rds("./data/survey.rds")
 sp <- st_read("./shape/TOWN_MOI_1070330.shp") %>% 
@@ -62,10 +62,10 @@ g1 = ggplot() +
     facet_wrap( ~ lang ,ncol=2, strip.position="top")+
     theme(strip.text.x = element_text(size = 25, face = 'bold'),
           legend.title = element_text(size = 22),
-          plot.caption = element_text(size = 22))+
+          plot.caption = element_text(size = 22, hjust = 0))+
     theme_define(plot_title = 35, legend_size=4.0,
                  legend_text = 20,
-                 legend_posi = 'left',
+                 legend_posi = 'right',
                  legend_anchor = 'top')+
     labs(fill="懂該語言之比例",
          title = "年齡層：",

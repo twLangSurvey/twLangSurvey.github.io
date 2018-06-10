@@ -86,7 +86,7 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
         breaks = c("女","男"),
         labels = c("女", "男")
     ) +
-    labs(x="年齡層", y="流利程度", fill = "") +
+    labs(x="年齡層", y="口說能力", fill = "") +
     theme_bw() +
     theme(axis.text = element_text(size = 22),
           title = element_text(size = 19),
@@ -99,5 +99,5 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
           legend.box = "vertical")
 
 gganimate(pl_ani_bar, ani.width=1000, 
-          ani.height=400, interval = 1.4,
+          ani.height=1000, interval = 1.4,
           filename="../web_source/out_graph/age_pyramid.gif")

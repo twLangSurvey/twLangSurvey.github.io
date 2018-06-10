@@ -100,7 +100,8 @@ df_mom <- comb_ttest(df_mom, "mom") %>%
     recode_lang(lang_col = "lang_group") %>%
     mutate(parent = "母親")
 
-df_full <- rbind(df_dad, df_mom)
+df_full <- rbind(df_dad, df_mom) %>%
+    filter(!is.na(diff))
 
 
 
