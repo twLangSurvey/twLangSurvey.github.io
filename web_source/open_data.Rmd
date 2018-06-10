@@ -1,5 +1,9 @@
 ---
 title: "開放資料"
+output:
+  html_document:
+    include:
+      after_body: disqus.html
 ---
 
 <br>
@@ -24,4 +28,4 @@ title: "開放資料"
 
 
 
-<br><br><br><br><br><br><br><br>
+<br><br><br><br>

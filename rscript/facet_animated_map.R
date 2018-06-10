@@ -35,7 +35,8 @@ survey_sp <- sp %>%
     filter(lang != "SEA_speak" & lang != "Ind_speak")
 survey_sp$lang <- factor(survey_sp$lang, 
                          levels=lang_idx, labels=lang_ch)
-
+survey_sp$age_group <- factor(survey_sp$age_group,
+                              levels = paste(seq(10,90,5),"-",seq(14,94,5),sep = "") %>% rev())
 # ani_tmap <- tm_shape(sp)+
 #      tm_fill()+
 #      tm_shape(survey_sp)+
