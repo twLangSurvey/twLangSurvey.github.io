@@ -23,3 +23,8 @@ div#section-1 {
 blockquote {
 	font-size: 15.5px;
 }
+
+.btn-gr {
+	margin-right: 4px;
+	margin-bottom: 3px;
+}

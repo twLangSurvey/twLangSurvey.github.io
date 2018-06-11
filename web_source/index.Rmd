@@ -1,7 +1,7 @@
 ---
 title: ""
 bibliography: twlangsurvey.bib
-csl: https://raw.githubusercontent.com/liao961120/local_depend/master/style_sheets/apa-no-doi-no-issue.csl
+csl: apa.csl
 link-citations: yes
 ---
 
@@ -141,10 +141,9 @@ modal(id="age-pyramid", modal_header = "語言金字塔", modal_body=content2)
 
 ## 語言傳承
 <br>
-
 年齡層上的語言能力差異可由**世代間的語言傳承**情況加以理解。家是小孩學會講話的地方，而父母(或主要扶養人)通常是子女學習語言的對象。**比較子女和父母**的語言能力，能讓我們以較細微、直觀的方式理解語言的活力。
 
-下圖顯示子女(問卷填寫者)與父、母語言能力的差異，同樣以語族[^langgroup2]為基礎：
+下圖顯示子女(問卷填寫者)與父、母語言能力的差異：
 
 $$子女語言能力平均 - 父親或母親語言能力平均$$
 因此在下圖中，若點在**黑橫線以上**代表子女語言能力**較父/母佳**；若點在**黑橫線以下**代表子女語言能力**較父/母差**。
@@ -171,14 +170,7 @@ button_bs("世代差異", class = "default pull-right btn-xs", data_toggle = "mo
 ###### Modal content #######
 content3 <- HTML('
 <p>
-
-</p>
-<p>
-
-</p>
-<br>
-
-<p style="font-size:10.5px">
+這裡一樣透過定義語族篩選樣本進行計算。不同的是，此將父、母分開：在計算子女與父親的語言能力差異時，僅以"父親是否會講該語言"作為篩選；計算子女與母親語言能力差異時，僅以母親篩選。
 </p>
 ')
 
@@ -187,28 +179,15 @@ modal(id="cross-gen-ability-modal", modal_header = "世代差異", modal_body=co
 ```
 <br>
 
-[^langgroup2]: 這裡一樣使用類似附註 4 對語族的定義。不同的是，此將父、母分開：在計算子女與父親的語言能力差異時，僅以"父親是否會講該語言"作為篩選；計算子女與母親語言能力差異時，僅以母親篩選。
-
 ------------------------
 
 ### 方言危機
 <br>
 
-語言流失中的一個明顯跡象可見於世代之間溝通語言的差異。你是否有過這兩種經驗之一：
-
-1. 平常使用方言講話，但在和晚輩說話時，卻不由自主地改成國語。
-
-2. 長輩和自己說話時，會自動由常用的方言改成國語。
-
-造成這種現象的可能原因不只一種：可能單純因為晚輩方言程度不佳，不易進行溝通；也有可能來自**對不同語言的態度**以及**對語言學習的錯誤認識**[^multilang] --- 即便對於尚在學習語言關鍵時期(7 歲前)的孩童，許多長輩仍使用國語和孩童說話[^codeswitch]。
-
-
-[^codeswitch]: 這在臺北地區十分明顯：祖父母常使用國語和年幼的孫兒講話。
-
-[^multilang]: 許多人可能擔心孩童暴露在雙語或多語環境下，會造成其容易混淆不同語言而造成語言學習遲緩，因而刻意使用單語進行交談。然而許多研究指出多語學習對孩童發展的好處[@kovacs2009; @kovacs2009a]。
+語言流失中的一個明顯跡象可見於世代之間使用語言的差異。透過下圖，我們能比較前一個世代(父母)和目前世代(問卷填答者)使用方言的情形，也能看出這個差異隨時間的改變：
 
 <br>
-```{r age-diff-main-lang-usage, fig.dim=c(7, 3.5)}
+```{r Mand-as-main, fig.dim=c(7, 3.5)}
 source("gen_diff_categorical.R", encoding = "utf-8")
 pl_Mand_crossgen_bar+
     theme_define(legend_text=10, axis_size = 10,
@@ -217,6 +196,113 @@ pl_Mand_crossgen_bar+
                  )
 ```
 
+```{r mand-as-main-modal}
+##### Modal Trigger Button #####
+button_bs("華語比例", class = "default pull-right btn-xs", data_toggle = "modal", data_target = "#mand-as-main-modal")
+
+###### Modal content #######
+content4 <- HTML('
+<p>
+
+</p>
+<p>
+
+<p style="font-size:10.5px">
+</p>
+')
+
+###### Modal Definition ########
+modal(id="mand-as-main-modal", modal_header = "華語比例", modal_body=content4)
+```
+<br>
+
+## 語言為何流失？
+<br>
+從跨年齡層與跨世代皆可看出臺灣語言流失的情況，然而造成語言流失的原因為何？
+
+臺灣的語言流失大致可歸因於幾種不互斥的因素：
+
+```{r lang-policy-modal}
+###### Modal content #######
+content5 <- HTML('
+<p>
+
+</p>
+<p>
+
+<p style="font-size:10.5px">
+</p>
+')
+
+###### Modal Definition ########
+modal(id="lang-policy-modal", modal_header = "語言政策", modal_body=content5)
+```
+
+```{r hl-lang-modal}
+###### Modal content #######
+content6 <- HTML('
+<p>
+
+</p>
+<p>
+
+<p style="font-size:10.5px">
+</p>
+')
+
+###### Modal Definition ########
+modal(id="hl-lang-modal", modal_header = "語言位階", modal_body=content6)
+```
+
+```{r ethn-merge-modal}
+###### Modal content #######
+content7 <- HTML('
+<p>
+
+</p>
+<p>
+
+<p style="font-size:10.5px">
+</p>
+')
+
+###### Modal Definition ########
+modal(id="ethn-merge-modal", modal_header = "族群融合", modal_body=content7)
+```
+
+```{r}
+button_bs("語言政策", class = "info btn-sm btn-gr", data_toggle = "modal", data_target = "#lang-policy-modal")
+button_bs("語言位階", class = "success btn-sm btn-gr", data_toggle = "modal", data_target = "#hl-lang-modal")
+button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal", data_target = "#ethn-merge-modal")
+```
+
+
+<!--
+你是否有過這兩種經驗之一：
+
+1. 平常使用方言講話，但在和晚輩說話時，卻不由自主地改成華語。
+
+2. 長輩和自己說話時，會自動由常用的方言改成華語。
+
+造成這種現象的原因可能有兩種：
+晚輩方言程度不佳，不易進行溝通；
+
+也有可能來自**對不同語言的態度**以及**對語言學習的錯誤認識**[^multilang] --- 即便對於尚在學習語言關鍵時期(7 歲前)的孩童，許多長輩仍使用華語和孩童說話[^codeswitch]。
+
+
+[^codeswitch]: 這在臺北地區十分明顯：祖父母常使用華語和年幼的孫兒講話。
+
+[^multilang]: 許多人可能擔心孩童暴露在雙語或多語環境下，會造成其容易混淆不同語言而造成語言學習遲緩，因而刻意使用單語進行交談。然而許多研究指出多語學習對孩童發展的好處[@kovacs2009; @kovacs2009a]。
+
+--> 
+
+
+
+## 參考資料{#reference}
+
+---
+nocite: |
+  @*
+...
   
-  
-<br><br><br><br><br><br>
+
