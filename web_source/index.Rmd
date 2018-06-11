@@ -1,7 +1,7 @@
 ---
 title: ""
 bibliography: twlangsurvey.bib
-csl: /home/liao/local_depend/style_sheets/apa-no-doi-no-issue.csl
+csl: https://raw.githubusercontent.com/liao961120/local_depend/master/style_sheets/apa-no-doi-no-issue.csl
 link-citations: yes
 ---
 

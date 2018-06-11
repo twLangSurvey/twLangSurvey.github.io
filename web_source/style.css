@@ -1,5 +1,6 @@
-.article {
-    font-family: -apple-system, BlinkMacSystemFont, "Roboto", 'Helvetica Neue', 'Arial', "文泉驛正黑", "WenQuanYi Zen Hei", "蘋方-繁", "PingFang TC", 'PingFang SC', "儷黑 Pro", "LiHei Pro", "Noto Sans CJK", "思源黑體", "微軟正黑體", "Microsoft JhengHei", 'Microsoft YaHei', SimSun, sans-serif;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "文泉驛正黑", "WenQuanYi Zen Hei", "蘋方-繁", "PingFang TC", "儷黑 Pro", "LiHei Pro", "Noto Sans CJK", "思源黑體", 'PingFang SC', "Roboto", 'Helvetica Neue', "微軟正黑體", "Microsoft JhengHei", 'Microsoft YaHei', 'Arial', SimSun, sans-serif;
+	line-height: 1.7;
 }
 
 
