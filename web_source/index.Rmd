@@ -38,6 +38,21 @@ source("bootstrap_fc.R")
 
 [^reliability]: 必須注意的是**網路問卷的侷限性**：此網頁所根據的網路問卷樣本可能過度集中在單一地區、身份或年齡層。因此，請讀者務必將此可能性記在心中。另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，才能說出更可信的故事。
 
+-------------------
+
+## 樣本代表性
+
+```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+source("descrip_stats_age_strc.R")
+```
+
+```{r out.width="50%", fig.show='hold'}
+knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
+pl_age_stru
+```
+
+
+
 ------------------
 
 ## 臺灣語言現況
