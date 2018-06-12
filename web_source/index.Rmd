@@ -40,6 +40,7 @@ source("bootstrap_fc.R")
 
 -------------------
 
+<!--
 ## 樣本代表性
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
@@ -51,7 +52,7 @@ knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
 pl_age_stru
 ```
 
-
+-->
 
 ------------------
 
