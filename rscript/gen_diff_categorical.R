@@ -24,39 +24,45 @@ survey[,idx2] <- map(survey[,idx2],
 
 ### Find out the Dominant Language Used by 
 # dad_mom, me_mom, me_dad (in list ls[1], ls[2], ls[3], respectively)
-max_idx <- vector("integer", 3L)
-for (i in seq_along(ls)) {
-    max <- survey[, ls[[i]]] %>% rowwise() %>% as.integer() %>% max
-    max_idx[i] <- which(as.integer(survey[, ls[[i]]]) == max)
+max_idx <- matrix(nrow = nrow(survey), ncol = length(ls))
+for(j in 1:nrow(survey)){
+    for (i in seq_along(ls)) {
+        max <- survey[j, ls[[i]]] %>% rowwise() %>% 
+            as.integer() %>% max
+        temp_idx <- which(as.integer(survey[j, ls[[i]]]) == 
+                              max)
+        ifelse(length(temp_idx) >= 2, 
+               max_idx[j, i] <- temp_idx[length(temp_idx)],
+               max_idx[j, i] <- temp_idx)
+    }
 }
-
 survey <- survey %>%
     mutate(  # Find out the main lang between mom & dad
         dad_mom_main_lang = 
-            case_when(max_idx[1] == 1 ~ "華語",
-                      max_idx[1] == 2 ~ "閩南語",
-                      max_idx[1] == 3 ~ "客家語",
-                      max_idx[1] == 4 ~ "原住民族語",
-                      max_idx[1] == 5 ~ "東南亞語言",
-                      max_idx[1] == 6 ~ "其它語言")
+            case_when(max_idx[,1] == 1 ~ "華語",
+                      max_idx[,1] == 2 ~ "閩南語",
+                      max_idx[,1] == 3 ~ "客家語",
+                      max_idx[,1] == 4 ~ "原住民族語",
+                      max_idx[,1] == 5 ~ "東南亞語言",
+                      max_idx[,1] == 6 ~ "其它語言")
         )%>%
         mutate( # Find out the main lang between me & dad
         me_dad_main_lang = 
-            case_when(max_idx[2] == 1 ~ "華語",
-                      max_idx[2] == 2 ~ "閩南語",
-                      max_idx[2] == 3 ~ "客家語",
-                      max_idx[2] == 4 ~ "原住民族語",
-                      max_idx[2] == 5 ~ "東南亞語言",
-                      max_idx[2] == 6 ~ "其它語言")
+            case_when(max_idx[,2] == 1 ~ "華語",
+                      max_idx[,2] == 2 ~ "閩南語",
+                      max_idx[,2] == 3 ~ "客家語",
+                      max_idx[,2] == 4 ~ "原住民族語",
+                      max_idx[,2] == 5 ~ "東南亞語言",
+                      max_idx[,2] == 6 ~ "其它語言")
         )%>%
         mutate( # Find out the main lang between me & mom
         me_mom_main_lang = 
-            case_when(max_idx[3] == 1 ~ "華語",
-                      max_idx[3] == 2 ~ "閩南語",
-                      max_idx[3] == 3 ~ "客家語",
-                      max_idx[3] == 4 ~ "原住民族語",
-                      max_idx[3] == 5 ~ "東南亞語言",
-                      max_idx[3] == 6 ~ "其它語言")
+            case_when(max_idx[,3] == 1 ~ "華語",
+                      max_idx[,3] == 2 ~ "閩南語",
+                      max_idx[,3] == 3 ~ "客家語",
+                      max_idx[,3] == 4 ~ "原住民族語",
+                      max_idx[,3] == 5 ~ "東南亞語言",
+                      max_idx[,3] == 6 ~ "其它語言")
         )
 
 
