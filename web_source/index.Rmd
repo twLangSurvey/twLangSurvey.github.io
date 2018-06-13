@@ -182,10 +182,10 @@ source("cross_gen_lang_ability_ttest.R", encoding = "utf-8")
 ```
 
 ```{r age-diff-lang-ability, out.width="100%", fig.dim=c(7, 3.5)}
-pl_full_diff+
+pl_full_diff +
     theme_define(plot_title=12,
                  sub_title=10,
-                 legend_text=8, axis_size = 8,
+                 legend_text=10, axis_size = 10,
                  axis_title_size=10,
                  legend_anchor = "bottom"
                  )

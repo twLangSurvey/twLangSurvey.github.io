@@ -111,13 +111,13 @@ rev_age_group <- unique(df_full$age_group) %>% rev()
 pl_full_diff <- df_full %>%
     ggplot(aes(x=age_group, y=diff, 
                color=lang_group)) +
-    facet_grid(. ~ parent)+
+    facet_grid(parent ~ .)+
     geom_segment(x=0, 
                  xend=20, 
                  y=0.0, yend=0.0, color="black")+
     geom_point(size=2.5) + 
     geom_line(aes(group = lang_group)) +
-    scale_y_continuous(breaks = seq(-5,5,0.5))+
+    scale_y_continuous(breaks = seq(-5,5,1))+
     scale_x_discrete(limits=rev_age_group)+
     labs(y="語言能力差異",
          x="年齡層", color="",
