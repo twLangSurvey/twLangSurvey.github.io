@@ -57,7 +57,7 @@ knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
 
 <div class="row">
 <div class="col-md-6">
-另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，我們才能說出更可信的故事。
+另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，我們才能說出更可信的故事。
 </div>
 <div class="col-md-6">
 ```{r }
