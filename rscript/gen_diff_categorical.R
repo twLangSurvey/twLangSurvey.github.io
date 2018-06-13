@@ -3,52 +3,61 @@ library(tidyr)
 library(purrr)
 library(ggplot2)
 
-survey <- readr::read_rds("./data/survey.rds")
+survey <- readr::read_rds("./data/survey.rds") %>%
+    filter(m_guard_identity != "無") %>%
+    filter(f_guard_identity != "無")
 
 ###### Create new col's: main lang used ######
 ## between last gen (mom & dad) & cross gen (me & mom/dad) ##
 
-Mand_fq<- c("幾乎全講華語", "多數講華語")
-other_infq <- c("不使用華語以外的語言", "少數用此語言", "幾乎不用此語言")
-no_exper <- c("沒有聽過他們對話", "沒有和他對話的經驗", "沒有和她對話的經驗")
+# 幾乎全用 多數使用 約一半 少數使用 幾乎不用
+langs <- c("Mand", "Tw", "Hak", "Ind", "SEA", "Other")
+subj <- c("dad_mom", "me_dad", "me_mom")
+ls <- vector("list", 3)
+for (i in seq_along(subj)) ls[[i]] <- paste(subj[i], langs, "fq", sep = "_")
+idx <- unlist(ls)
+idx2 <- vector("integer", length(idx))
+for (i in seq_along(idx)) idx2[i] <- which(colnames(survey)== idx[i])
+survey[,idx2] <- map(survey[,idx2], 
+                     function(x) factor(x, levels = c("幾乎不用", "少數使用", "約一半", "多數使用","幾乎全用")))
+
+
+### Find out the Dominant Language Used by 
+# dad_mom, me_mom, me_dad (in list ls[1], ls[2], ls[3], respectively)
+max_idx <- vector("integer", 3L)
+for (i in seq_along(ls)) {
+    max <- survey[, ls[[i]]] %>% rowwise() %>% as.integer() %>% max
+    max_idx[i] <- which(as.integer(survey[, ls[[i]]]) == max)
+}
 
 survey <- survey %>%
     mutate(  # Find out the main lang between mom & dad
         dad_mom_main_lang = 
-            case_when(dad_mom_Mand_fq %in% no_exper ~ "NA",
-                      dad_mom_Mand_fq %in% Mand_fq ~ "華語",
-                      dad_mom_Mand_fq == "約一半" & 
-                          dad_mom_2nd_lang_fq == "約一半" ~ 
-                          paste(dad_mom_2nd_lang, "、華語各半", sep=""),
-                      ! dad_mom_Mand_fq %in% Mand_fq & 
-                          ! dad_mom_2nd_lang_fq %in% other_infq ~ 
-                          dad_mom_2nd_lang,
-                      TRUE ~ "多語混用")
-        ) %>%
+            case_when(max_idx[1] == 1 ~ "華語",
+                      max_idx[1] == 2 ~ "閩南語",
+                      max_idx[1] == 3 ~ "客家語",
+                      max_idx[1] == 4 ~ "原住民族語",
+                      max_idx[1] == 5 ~ "東南亞語言",
+                      max_idx[1] == 6 ~ "其它語言")
+        )%>%
         mutate( # Find out the main lang between me & dad
         me_dad_main_lang = 
-            case_when(me_dad_Mand_fq %in% no_exper ~ "NA",
-                      me_dad_Mand_fq %in% Mand_fq ~ "華語",
-                      me_dad_Mand_fq == "約一半" & 
-                          me_dad_2nd_lang_fq == "約一半" ~ 
-                          paste(me_dad_2nd_lang, "、華語各半", sep=""),
-                      ! me_dad_Mand_fq %in% Mand_fq & 
-                          ! me_dad_2nd_lang_fq %in% other_infq ~ 
-                          me_dad_2nd_lang,
-                      TRUE ~ "多語混用")
-    ) %>% 
+            case_when(max_idx[2] == 1 ~ "華語",
+                      max_idx[2] == 2 ~ "閩南語",
+                      max_idx[2] == 3 ~ "客家語",
+                      max_idx[2] == 4 ~ "原住民族語",
+                      max_idx[2] == 5 ~ "東南亞語言",
+                      max_idx[2] == 6 ~ "其它語言")
+        )%>%
         mutate( # Find out the main lang between me & mom
         me_mom_main_lang = 
-            case_when(me_mom_Mand_fq %in% no_exper ~ "NA",
-                      me_mom_Mand_fq %in% Mand_fq ~ "華語",
-                      me_mom_Mand_fq == "約一半" & 
-                          me_mom_2nd_lang_fq == "約一半" ~ 
-                          paste(me_mom_2nd_lang, "、華語各半", sep=""),
-                      ! me_mom_Mand_fq %in% Mand_fq & 
-                          ! me_mom_2nd_lang_fq %in% other_infq ~ 
-                          me_mom_2nd_lang,
-                      TRUE ~ "多語混用")
-    )
+            case_when(max_idx[3] == 1 ~ "華語",
+                      max_idx[3] == 2 ~ "閩南語",
+                      max_idx[3] == 3 ~ "客家語",
+                      max_idx[3] == 4 ~ "原住民族語",
+                      max_idx[3] == 5 ~ "東南亞語言",
+                      max_idx[3] == 6 ~ "其它語言")
+        )
 
 
 ##### Percentage of (main_lang == 華語) #####

@@ -5,10 +5,10 @@ library(lubridate)
 library(purrr)
 
 ###### Read Data From google sheet ######
-survey <- readr::read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vTpvHc3j0uVHckg-BVFTfCZsQb9f9HsqxR3OM7fzRQ-CvW-bKWNU7mNk30IrHbj_8G7zeTd5fi7CN5a/pub?output=csv", col_names = T)
+survey <- readr::read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSRfcBk6Y0F73kAB6K1jkEr2g8ewZ_XMI7JYdEFpyKEb81WyWOOYOt4ECRm16bltFgs8i-sIR18Apig/pub?gid=0&single=true&output=csv", col_names = T)
 # https://docs.google.com/spreadsheets/d/1JM9eqIiWt4uTa7CXKdYsSyXJIPKTpk_fVGSdK0O4gys/edit?usp=sharing
 
-var_eng_ch <- readr::read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQU_SO82bnHAavH-qJM-VL8T2RPlFS5Uuzy4Pu9lsOYZjJ9tnSThx0tZs3bQDcIY7EEABDC8JKpfMcD/pub?output=tsv", col_names = F)
+var_eng_ch <- readr::read_tsv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQU_SO82bnHAavH-qJM-VL8T2RPlFS5Uuzy4Pu9lsOYZjJ9tnSThx0tZs3bQDcIY7EEABDC8JKpfMcD/pub?gid=0&single=true&output=tsv", col_names = F)
 # https://docs.google.com/spreadsheets/d/1NbalBJPAPIzGwpVDI9fTf0q8GpCBWhVep_9aD5uQKy4/edit?usp=sharing
 
 
@@ -36,7 +36,7 @@ survey <- survey %>%
     select(-jk1, -jk2, -jk3, -jk4)
 
 
-###### Recode lang ability ######
+###### Recode lang ability/used freq   ######
 ## Convert points 1-6 to points 0-5 ##
 
 index <- which(survey[1,] %in% 1:6) # find columns with likert scales (6 points) 
