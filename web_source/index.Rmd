@@ -50,20 +50,21 @@ knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
 ```
 </div>
 <div class="col-md-6">
+<br>
 在開始之前，必須提醒讀者注意此網站所依據的資料。由於採用**網路問卷**，此網頁所根據的樣本可能過度集中於單一地區、身份或年齡層。因此，請讀者務必對接下來所見的圖表保持警惕。
 
 在此，網頁提供了兩張圖表顯示**目前收集之資料**的**地理分佈**以及**性別年齡結構**，希望能讓讀者對資料的來源有個大概的了解。
-</div></div>
 
-<div class="row">
-<div class="col-md-6">
-另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，我們才能說出更可信的故事。
-</div>
-<div class="col-md-6">
+<br>
+
 ```{r }
 pl_age_stru
 ```
 </div></div>
+
+<br>
+另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，我們才能說出更可信的故事。
+
 
 
 ------------------

@@ -48,9 +48,9 @@ pl_age_stru <- ggplot(survey, aes(x = age_group,
           legend.justification = "right",
           legend.position = "bottom",
           legend.box = "vertical",
-          plot.caption = element_text(size = 18, 
-                                      hjust = 0)
+          plot.caption = element_text(size = 15, 
+                                      hjust = 1)
           )+
     labs(x="年齡層", y="人數", fill = "",
          title="樣本組成結構",
-         caption = paste("男性：",male_n,"人","\n女性：",female_n,"人", sep = ""))
+         caption = paste("女性：",female_n,"人", "  男性：",male_n,"人", sep = ""))

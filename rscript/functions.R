@@ -54,9 +54,9 @@ filter_ethnic1 <-
 filter_ethnic2 <- function(df, lang="Mand", lev=3) {
     sp_lang1 <- paste("dad_", lang, "_speak", sep = "")
     sp_lang2 <- paste("mom_", lang, "_speak", sep = "")
-    idx <- (df[[sp_lang1]] >= lev | df[[sp_lang2]] >= lev)
     df <- df %>% filter(m_guard_identity != "無" | 
                    f_guard_identity != "無")
+    idx <- (df[[sp_lang1]] >= lev | df[[sp_lang2]] >= lev)
     df <- df[idx,]
     return(df)
 }
