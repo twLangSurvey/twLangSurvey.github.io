@@ -156,7 +156,8 @@ pl_Mand_crossgen_bar <- rbind_df_PMand(survey) %>%
         title = expression(bold("華語") * "作為主要溝通語言之比例")
     ) + #theme_bw(base_size = 14)+
     theme_bw()+
-    scale_x_discrete(limits=rev_age_group)
+    scale_x_discrete(limits=rev_age_group)+
+    scale_y_continuous(limits = c(0,1))
 #tmaptools::palette_explorer()
 # tmaptools::get_brewer_pal("Dark2", n = 6)
 
