@@ -3,6 +3,7 @@ library(dplyr)
 library(tidyr)
 library(lubridate)
 library(purrr)
+library(stringr)
 
 ###### Read Data From google sheet ######
 survey <- readr::read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vSRfcBk6Y0F73kAB6K1jkEr2g8ewZ_XMI7JYdEFpyKEb81WyWOOYOt4ECRm16bltFgs8i-sIR18Apig/pub?gid=0&single=true&output=csv", col_names = T)
@@ -39,7 +40,10 @@ survey <- survey %>%
 ###### Recode lang ability/used freq   ######
 ## Convert points 1-6 to points 0-5 ##
 
-index <- which(survey[1,] %in% 1:6) # find columns with likert scales (6 points) 
+idx_sp <- which(str_match(colnames(survey), "_speak") == "_speak")
+idx_lst <- which(str_match(colnames(survey), "_listen") == "_listen")
+index <- c(idx_lst, idx_sp)
+# find columns with likert scales (6 points) 
 
 sub_1_likert <- function(x) as.numeric(x)-1
 

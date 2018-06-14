@@ -45,7 +45,7 @@ survey_sp$age_group <- factor(survey_sp$age_group,
 #                free.coords = F, nrow = 3, ncol=2)
 # 
 # tmap_animation(ani_tmap, filename = "../web_source/out_graph/taiwan_sp.gif", delay = 70, width = 1000)
-
+n_row <- nrow(survey)
 c <- tmaptools::get_brewer_pal("Oranges", n = 6)
 library(ggplot2)
 
@@ -73,5 +73,5 @@ g1 = ggplot() +
     )
 
 gganimate::gganimate(g1, ani.width=972,
-          ani.height=1000, interval = 1.4,
+          ani.height=1000, interval = 1.1,
           filename="../web_source/out_graph/animated_facet_map.gif")
