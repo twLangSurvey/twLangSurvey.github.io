@@ -22,15 +22,15 @@ survey <- survey %>%
     left_join(zip, by=c("curr_resid"="ZIPCODE")) %>%
     mutate_age_group()
 survey[lang_idx] <- survey[lang_idx] %>%
-    map(function(x) x >= 3)
+    map(function(x) x >= 3) #Transform 6 point likert to binary
 
 survey_sp <- survey %>%
     gather(key="lang", value = "know", lang_idx) %>%
-    group_by(lang, COUNTYNAME, TOWNNAME, age_group) %>%
+    group_by(lang, COUNTYNAME, age_group) %>% #縣市為單位, 若要鄉鎮市區, 加上 'TOWNNAME'
     summarise(mean(know)) %>%
     ungroup()
 survey_sp <- sp %>% 
-    left_join(survey_sp, by=c("COUNTYNAME")) %>% 
+    left_join(survey_sp, by=c("COUNTYNAME")) %>% #縣市為單位, 若要鄉鎮市區, 加上 'TOWNNAME'
     filter(!is.na(age_group)) %>%
     filter(lang != "SEA_speak" & lang != "Ind_speak")
 survey_sp$lang <- factor(survey_sp$lang, 
@@ -73,5 +73,5 @@ g1 = ggplot() +
     )
 
 gganimate::gganimate(g1, ani.width=972,
-          ani.height=1000, interval = 1.7,
+          ani.height=1000, interval = 1.4,
           filename="../web_source/out_graph/animated_facet_map.gif")
