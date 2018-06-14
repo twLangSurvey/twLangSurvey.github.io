@@ -1,7 +1,7 @@
 name: 臺灣語言使用調查
 exclude:
-  - animate.Rmd
-  - '*.csv'
+- animate.Rmd
+- '*.csv'
 navbar:
   title: 臺灣語言使用調查
   right:
@@ -10,16 +10,16 @@ navbar:
   - icon: fa-share-alt
     menu:
     - icon: fa-facebook-square
-      text: "Facebook"
+      text: Facebook
       href: https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/
     - icon: fa-google-plus
-      text: "Google Plus"
+      text: Google Plus
       href: https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/main/
     - icon: fa-twitter
-      text: "Twitter"
+      text: Twitter
       href: https://twitter.com/home?status=https%3A//twlangsurvey.github.io/main/
     - icon: fa-linkedin
-      text: "Linkedin"
+      text: Linkedin
       href: https://www.linkedin.com/shareArticle?mini=true&url=https%3A//twlangsurvey.github.io/main/&title=&summary=&source=
   left:
   - icon: fa-home

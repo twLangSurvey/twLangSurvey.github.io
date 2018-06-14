@@ -45,13 +45,14 @@ filter_ethnic <- function(df, lang, lev=3, range=5) {
 ##### Animated bar plot #####
 
 ### Combine different ethnic groups ###
-lang <- c('Mand', 'Tw', 'Hak', 'Ind', 'SEA')
-lang_ch <- c('華語', '閩南語', '客家語', '原住民族語', '東南亞語言')
+lang <- c('Mand', 'Tw', 'Hak', 'Ind', 'SEA', 'Eng')
+lang_ch <- c('華語', '閩南語', '客家語', '原住民族語', '東南亞語言', '英語')
+lev <- c(3,3,3,3,3,0)
 ethn_list_df <- vector("list", length(lang))
 
 for (i in seq_along(lang)){
     ethn_list_df[[i]] <- filter_ethnic(lang_fluen, 
-                                       lang = lang[i]) %>%
+                                       lang = lang[i], lev = lev[i]) %>%
         mutate(ethn_group = lang_ch[i]) %>%
         select(age, gender, age_group, ethn_group,
                paste(lang[i],"_speak",sep = "")) %>%
@@ -74,7 +75,7 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
              ) +
     geom_bar(stat = "identity",
              position = "identity",
-             width = 0.7) +
+             width = 0.5) +
     scale_y_continuous(
         limits = c(-5, 5),
         breaks = seq(-5, 5, 1),
@@ -88,16 +89,16 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
     ) +
     labs(x="年齡層", y="口說能力", fill = "") +
     theme_bw() +
-    theme(axis.text = element_text(size = 22),
+    theme(axis.text = element_text(size = 24),
           title = element_text(size = 19),
-          axis.title = element_text(size = 25),
-          plot.title = element_text(size = 30,
+          axis.title = element_text(size = 28),
+          plot.title = element_text(size = 35,
                                face="bold"),
-          legend.text = element_text(size = 22),
+          legend.text = element_text(size = 23),
           legend.justification = "right",
           legend.position = "bottom",
           legend.box = "vertical")
 
-gganimate(pl_ani_bar, ani.width=1000, 
-          ani.height=1000, interval = 1.4,
+gganimate(pl_ani_bar, ani.width=1200, 
+          ani.height=700, interval = 1.4,
           filename="../web_source/out_graph/age_pyramid.gif")
