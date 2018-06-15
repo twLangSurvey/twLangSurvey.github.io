@@ -24,6 +24,8 @@ navbar:
   left:
   - icon: fa-home
     href: index.html
+  - icon: fa-edit
+    href: https://github.com/twLangSurvey/main/blob/master/web_source/index.Rmd
 output:
   html_document:
     theme: default
