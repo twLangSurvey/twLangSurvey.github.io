@@ -32,7 +32,7 @@ source("bootstrap_fc.R")
 
 ## 前言
 
-此網頁是為了[臺灣地區語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSeCZpWjEEcK7sE7qBoO8BIem3M79iz5NB-7FIcaGgvytakQ2A/viewform)這份問卷而設計的。**臺灣地區語言使用調查**是為了解臺灣各語言的使用情況，特別是華語(國語)以外的弱勢語言；這個網頁則是為了即時將問卷分析結果和大家分享，希望藉此引起大家對臺灣多語社會以及弱勢語言的關注。
+此網頁是為了[臺灣地區語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)這份問卷而設計的。**臺灣地區語言使用調查**是為了解臺灣各語言的使用情況，特別是華語(國語)以外的弱勢語言；這個網頁則是為了即時將問卷分析結果和大家分享，希望藉此引起大家對臺灣多語社會以及弱勢語言的關注。
 
 接下來將透過幾段文字和幾張圖片，描述臺灣語言的現況，並會聚焦在**跨年齡層**以及**跨世代**的語言流失現象。
 
