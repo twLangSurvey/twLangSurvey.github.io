@@ -106,7 +106,7 @@ df_full <- rbind(df_dad, df_mom) %>%
 
 
 #### Plot dad #####
-rev_age_group <- unique(df_full$age_group) %>% rev()
+rev_age_group <- unique(df_full$age_group) %>% sort() %>% rev()
 
 pl_full_diff <- df_full %>%
     ggplot(aes(x=age_group, y=diff, 
