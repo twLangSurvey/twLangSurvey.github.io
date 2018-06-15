@@ -185,7 +185,7 @@ $$子女語言能力平均 - 父親或母親語言能力平均$$
 source("cross_gen_lang_ability_ttest.R", encoding = "utf-8")
 ```
 
-```{r age-diff-lang-ability, out.width="100%", fig.dim=c(7, 3.5)}
+```{r age-diff-lang-ability, out.width="100%", fig.dim=c(7, 4)}
 pl_full_diff +
     theme_define(plot_title=12,
                  sub_title=10,
@@ -210,6 +210,13 @@ content3 <- HTML('
 modal(id="cross-gen-ability-modal", modal_header = "世代差異", modal_body=content3)
 ```
 <br>
+
+從上圖我們可以很容易**分辨出強勢與弱勢語言**：
+
+- 黑線以上的語言為強勢語言，且**越上方越強勢**
+- 黑線以下的語言為弱勢語言，且**越下方越弱勢**
+
+依目前的資料，我們可以發現**英語**是最強勢的語言，其在各個年齡層皆出現**語言能力提昇**的現象。
 
 ------------------------
 
