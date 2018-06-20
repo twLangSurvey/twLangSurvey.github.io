@@ -67,6 +67,8 @@ survey <- survey %>%
 ###### Replace with new value #######
 survey$first_lang[survey$first_lang == "華語(國語)"] <- "華語"
 
+survey <- distinct(survey)
+
 ###### Save cleaned data #######
 readr::write_rds(survey, "./data/survey.rds")
 readr::write_csv(survey, "./data/survey.csv")
