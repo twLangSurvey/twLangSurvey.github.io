@@ -333,11 +333,35 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 ---------------------
 
-## 參考資料{#reference}
 
----
-nocite: |
-  @*
-...
-  
+```{r biblo-modal}
+###### Modal content #######
+content_ref <- HTML('
+<div id="reference">
+<div id="ref-leung2008">
+<p>Leung, A. K.-y., Maddux, W. W., Galinsky, A. D., &amp; Chiu, C.-y. (2008). Multicultural experience enhances creativity: The when and how. <em>American Psychologist</em>, <em>63</em>(3), 169–181. <a href="https://doi.org/10.1037/0003-066X.63.3.169" class="uri">https://doi.org/10.1037/0003-066X.63.3.169</a></p>
+</div>
+<div id="ref-stanford2008">
+<p>Stanford, J. N. (2008). Child dialect acquisition: New perspectives on parent/peer influence1. <em>Journal of Sociolinguistics</em>, <em>12</em>(5), 567–596. <a href="https://doi.org/10.1111/j.1467-9841.2008.00383.x" class="uri">https://doi.org/10.1111/j.1467-9841.2008.00383.x</a></p>
+</div>
+<div id="ref-2016">
+<p>原住民族語言調查研究三年實施計畫：16 族綜合比較報告. (2016).</p>
+</div>
+<div id="ref-kejiaweiyuanhui2013">
+<p>客家委員會. (2013). 客語使用狀況調查.</p>
+</div>
+<div id="ref-caishuling2001">
+<p>蔡淑鈴. (2001). 語言使用與職業階層化的關係: 比較台灣男性的族群差異. <em>台灣社會學</em>, <em>1</em>, 65–111.</p>
+</div>
+<div id="ref-huangxuanfan1993">
+<p>黃宣範. (1993). <em>語言、社會與族羣意識: 臺灣語言社會學的研究</em>. 臺北市: 文鶴.</p>
+</div>
+</div>
+')
+
+###### Modal Definition ########
+modal(id="biblo-modal", modal_header = "參考資料", modal_body=content_ref)
+button_bs("參考資料", class = "default btn-sm btn-gr", data_toggle = "modal", data_target = "#biblo-modal")
+```
+
 
