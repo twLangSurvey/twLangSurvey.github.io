@@ -73,5 +73,5 @@ g1 = ggplot() +
     )
 
 gganimate::gganimate(g1, ani.width=972,
-          ani.height=1000, interval = 1.1,
+          ani.height=1000, interval = 1.4,
           filename="../web_source/out_graph/animated_facet_map.gif")
