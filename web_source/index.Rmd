@@ -319,7 +319,7 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 ## 小結：為何關注語言流失？
 <br>
-對於這個問題有許多不同的回答。以下僅代表我們的想法：
+對於這個問題有許多不同的回答。以下僅代表其中一個想法：
 
 > 臺灣是個多語社會，我們有豐富多樣的南島語(原住民族語)、閩南語、客家語、華語以及東南亞語言。多語現象對於臺灣甚為珍貴：
 >
@@ -331,7 +331,7 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 ## 協助我們改進網頁
 <br>
-此網頁在建置之時，可能出現一些錯誤；即使沒有錯誤，也有許多進步的空間。我們相信開源與合作的價值，若您認為有網頁有可進步之處，熟悉 GitHub 者可直接點選網頁上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)並提出 pull request；其他讀者則可透過此 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link)提出改進意見。
+此網頁在建置之時，可能出現一些錯誤；即使沒有錯誤，也有許多進步的空間。我們相信開源與合作的價值，若您認為有網頁有可進步之處，熟悉 GitHub 者可直接點選網頁上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)並提出 pull request，其他讀者則可透過此 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 提出改進意見。
 
 ---------------------
 
