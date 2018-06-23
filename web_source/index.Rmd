@@ -26,7 +26,7 @@ source("bootstrap_fc.R")
 ```
 
 <p style="text-align:right; font-size:8px">
-上次更新：`r Sys.time()`
+上次更新：`r Sys.Date()`
 </p>
 
 
