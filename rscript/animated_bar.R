@@ -65,8 +65,9 @@ pl <- bind_rows(ethn_list_df) %>%
     rename(avg_fluency = `mean(lang_fluency)`) %>%
     mutate(age_group = as.character(age_group))
 
-
-pl_ani_bar <- ggplot(pl, aes(x = age_group,
+    
+pl_age_py <- function(data, title=NULL) {
+   plot <- ggplot(data, aes(x = age_group,
                      fill = gender,
                      y = ifelse(gender == "男",
                                 avg_fluency,
@@ -87,7 +88,7 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
         breaks = c("女","男"),
         labels = c("女", "男")
     ) +
-    labs(x="年齡層", y="口說能力", fill = "") +
+    labs(x="年齡層", y="口說能力", fill = "", title= title) +
     theme_bw() +
     theme(axis.text = element_text(size = 24),
           title = element_text(size = 19),
@@ -98,7 +99,45 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
           legend.justification = "right",
           legend.position = "bottom",
           legend.box = "vertical")
+}
 
-gganimate(pl_ani_bar, ani.width=1200, 
+gganimate(pl_age_py(pl), 
+          ani.width=1200, 
           ani.height=700, interval = 1.8,
           filename="../web_source/out_graph/age_pyramid.gif")
+
+
+
+expand_age <- function(df, age_group_all) {
+    for (i in seq_along(age_group_all)) {
+        if (!(age_group_all[i] %in% df$age_group)) {
+            df <- rbind(df, list(gender = "女",
+                           ethn_group = "b",
+                           age_group = age_group_all[i],
+                           avg_fluency = 0
+                           )
+                  )
+        }
+    }
+    return(df)
+}
+
+age_group_all <- pl$age_group %>% unique()
+
+pl_Mand <- pl %>% filter(ethn_group == lang_ch[1]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[1])
+ggsave("../web_source/out_graph/Mand_pyramid.png", dpi = 500, width = 14, height = 8.166)
+
+pl_Tw <- pl %>% filter(ethn_group == lang_ch[2]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[2])
+ggsave("../web_source/out_graph/Tw_pyramid.png", dpi = 500, width = 14, height = 8.166)
+
+pl_Hak <- pl %>% filter(ethn_group == lang_ch[3]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[3])
+ggsave("../web_source/out_graph/Hak_pyramid.png", dpi = 500, width = 14, height = 8.166)
+
+pl_Ind <- pl %>% filter(ethn_group == lang_ch[4]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[4])
+ggsave("../web_source/out_graph/Ind_pyramid.png", dpi = 500, width = 14, height = 8.166)
+
+pl_SEA <- pl %>% filter(ethn_group == lang_ch[5]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[5])
+ggsave("../web_source/out_graph/SEA_pyramid.png", dpi = 500, width = 14, height = 8.166)
+
+pl_Eng <- pl %>% filter(ethn_group == lang_ch[6]) %>% expand_age(age_group_all) %>% pl_age_py(title = lang_ch[6])
+ggsave("../web_source/out_graph/Eng_pyramid.png", dpi = 500, width = 14, height = 8.166)

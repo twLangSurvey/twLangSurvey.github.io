@@ -18,11 +18,12 @@ knitr::opts_chunk$set(
 	# fig.dim = c(3.5, 3.5)  # (width, height)
 knitr::opts_knit$set(root.dir='../rscript')
 Sys.setenv(TZ="Asia/Taipei")
-library(widgetframe)
-knitr::opts_chunk$set(widgetframe_self_contained = FALSE) 
-knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE) 
-knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
+# library(widgetframe)
+# knitr::opts_chunk$set(widgetframe_self_contained = FALSE) 
+# knitr::opts_chunk$set(widgetframe_isolate_widgets = TRUE) 
+# knitr::opts_chunk$set(widgetframe_widgets_dir = './interactive_graph' )
 source("bootstrap_fc.R")
+library(knitr)
 ```
 
 <p style="text-align:right; font-size:8px">
@@ -47,11 +48,7 @@ source("descrip_stats_age_strc.R")
 ```
 
 <div class="row">
-<div class="col-md-6">
-```{r}
-knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
-```
-</div>
+<div class="col-md-6">`r include_graphics("./out_graph/sample_spatial_distr.gif")`</div>
 <div class="col-md-6">
 <br>
 在此需提醒讀者注意網站所依據的資料。由於採用**網路問卷**，因此樣本可能過度集中單一地區、身份或年齡層。
@@ -80,12 +77,11 @@ pl_age_stru
 </ul>
 
 <div class="tab-content">
-<div id="all-age" class="tab-pane fade in active">
-```{r, fig.margin=TRUE}
-knitr::include_graphics("./out_graph/facet_static_map.png")
-```
+<div id="all-age" class="tab-pane fade in active">`r include_graphics("./out_graph/facet_static_map.png")`</div><!--all-age div -->
 
-<br>
+<div id="age-group" class="tab-pane fade">`r include_graphics("./out_graph/animated_facet_map.gif")`</div><!--age-group div -->
+</div><!-- tabs-content div -->
+
 ```{r lang-map-modal1}
 ##### Modal Trigger Button #####
 button_bs("語言地圖", class = "default pull-left btn-xs", data_toggle = "modal", data_target = "#lang-map")
@@ -110,23 +106,6 @@ content <- HTML('
 modal(id="lang-map", modal_header = "語言地圖", modal_body=content)
 ```
 <br>
-</div><!--all-age div -->
-
-<div id="age-group" class="tab-pane fade">
-```{r , fig.margin=TRUE}
-knitr::include_graphics("./out_graph/animated_facet_map.gif")
-```
-
-<br>
-```{r lang-map-modal2}
-##### Modal Trigger Button #####
-button_bs("語言地圖", class = "default pull-left btn-xs", data_toggle = "modal", data_target = "#lang-map2")
-modal(id="lang-map2", modal_header = "語言地圖", modal_body=content)
-```
-<br>
-</div><!--age-group div -->
-</div><!-- tab-content div -->
-
 
 </div><!--left col  div -->
 
@@ -163,9 +142,36 @@ modal(id="lang-map2", modal_header = "語言地圖", modal_body=content)
 </div>
 
 <div class="col-md-7">
-```{r}
-knitr::include_graphics("./out_graph/age_pyramid.gif")
-```
+
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#ani-pyramid">動畫</a></li>
+<li><a data-toggle="tab" href="#mand-pyramid">華語</a></li>
+<li><a data-toggle="tab" href="#tw-pyramid">閩南語</a></li>
+<li><a data-toggle="tab" href="#hak-pyramid">客家語</a></li>
+</ul>
+<ul class="nav nav-tabs">
+<li><a data-toggle="tab" href="#ind-pyramid">原住民族語</a></li>
+<li><a data-toggle="tab" href="#sea-pyramid">東南亞語言</a></li>
+<li><a data-toggle="tab" href="#eng-pyramid">英語</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="ani-pyramid" class="tab-pane fade in active">`r include_graphics("./out_graph/age_pyramid.gif")`</div><!--ani-pyramid div -->
+
+<div id="mand-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/Mand_pyramid.png")`</div><!-- mand-pyramid div -->
+
+<div id="tw-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/Tw_pyramid.png")`</div><!-- tw-pyramid div -->
+
+<div id="hak-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/Hak_pyramid.png")`</div><!-- hak-pyramid div -->
+
+<div id="ind-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/Ind_pyramid.png")`</div><!-- ind-pyramid div -->
+
+<div id="sea-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/SEA_pyramid.png")`</div><!-- sea-pyramid div -->
+
+<div id="eng-pyramid" class="tab-pane fade">`r include_graphics("./out_graph/Eng_pyramid.png")`</div><!-- eng-pyramid div -->
+
+
+</div><!-- end tabs-content div -->
 
 ```{r age-pyramid-modal}
 ##### Modal Trigger Button #####
@@ -191,7 +197,9 @@ content2 <- HTML('
 ###### Modal Definition ########
 modal(id="age-pyramid", modal_header = "語言金字塔", modal_body=content2)
 ```
-</div></div>
+<br>
+</div><!-- right-col div -->
+</div><!-- row div -->
 
 [^langgroup]: 這裡語族的定義是依據**父親或母親(主要扶養人)是否會講該語言而定**，因此同一個人可以同時被歸類為一種以上的語族。若需更多資訊，可點選金字塔動畫圖下方之**語言金字塔**按鈕。
 
