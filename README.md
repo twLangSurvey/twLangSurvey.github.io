@@ -12,3 +12,5 @@
 - [survey.rds](https://github.com/twLangSurvey/main/blob/gh-pages/data/survey.rds)
 
 這些為經過初步處理的資料，隨網頁同步更新。變項名稱與原始題目對照，詳見此 [google sheet](https://docs.google.com/spreadsheets/d/1NbalBJPAPIzGwpVDI9fTf0q8GpCBWhVep_9aD5uQKy4/edit?usp=sharing)。
+
+若有任何問題，歡迎透過 [Email](liaomovie2@gmail.com) 聯絡我。
