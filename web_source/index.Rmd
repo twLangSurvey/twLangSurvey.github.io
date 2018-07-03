@@ -73,14 +73,23 @@ pl_age_stru
 ------------------
 
 ## 臺灣語言現況
-<br>
+
 <div class="row">
 <div class="col-md-7">
-```{r , fig.margin=TRUE}
-knitr::include_graphics("./out_graph/animated_facet_map.gif")
+
+<ul class="nav nav-tabs">
+<li class="active"><a data-toggle="tab" href="#all-age">整體</a></li>
+<li><a data-toggle="tab" href="#age-group">年齡層</a></li>
+</ul>
+
+<div class="tab-content">
+<div id="all-age" class="tab-pane fade in active">
+```{r, fig.margin=TRUE}
+knitr::include_graphics("./out_graph/facet_static_map.png")
 ```
 
-```{r lang-map-modal}
+<br>
+```{r lang-map-modal1}
 ##### Modal Trigger Button #####
 button_bs("語言地圖", class = "default pull-left btn-xs", data_toggle = "modal", data_target = "#lang-map")
 
@@ -104,7 +113,26 @@ content <- HTML('
 modal(id="lang-map", modal_header = "語言地圖", modal_body=content)
 ```
 <br>
-</div>
+</div><!--all-age div -->
+
+<div id="age-group" class="tab-pane fade">
+```{r , fig.margin=TRUE}
+knitr::include_graphics("./out_graph/animated_facet_map.gif")
+```
+
+<br>
+```{r lang-map-modal2}
+##### Modal Trigger Button #####
+button_bs("語言地圖", class = "default pull-left btn-xs", data_toggle = "modal", data_target = "#lang-map2")
+modal(id="lang-map2", modal_header = "語言地圖", modal_body=content)
+```
+<br>
+</div><!--age-group div -->
+</div><!-- tab-content div -->
+
+
+</div><!--left col  div -->
+
 
 <div class="col-md-5"><br>
 我們可以根據問卷資料繪製出**動態語言地圖**，顯示出臺灣**各地**[^unit]，各語言**在不同年齡層之間消長**的情況。
@@ -114,7 +142,8 @@ modal(id="lang-map", modal_header = "語言地圖", modal_body=content)
 > 若僅有少數比例的人口懂某語言，那該語言作為溝通媒介的效率即不佳，只能用來與少數人溝通；此時，若這些少數人口**同時懂"其它更通用的語言"**，那人們使用後者的可能性會上升，因而進一步加速弱勢語言的消失。
 
 臺灣相當符合上述情況。成長於多語社會之中，多數臺灣人會一種以上的語言(如"國語-臺語"、"國語-客語"、"國語-原住民族語-臺語"等)，且**絕大多數的人皆會講華語(國語)**。在此情形下，臺灣的各語言間形成明顯強勢與弱勢的地位。
-</div></div>
+</div><!--right col div -->
+</div><!--row div -->
 
 [^unit]: 目前由於資料稀少，地圖的基本單位是**縣市**。隨著資料累積，之後將以**鄉鎮市區**為基本單位繪製地圖，即可看見各地更細微的狀況。
 

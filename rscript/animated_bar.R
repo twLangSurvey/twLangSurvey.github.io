@@ -100,5 +100,5 @@ pl_ani_bar <- ggplot(pl, aes(x = age_group,
           legend.box = "vertical")
 
 gganimate(pl_ani_bar, ani.width=1200, 
-          ani.height=700, interval = 1.6,
+          ani.height=700, interval = 1.8,
           filename="../web_source/out_graph/age_pyramid.gif")
