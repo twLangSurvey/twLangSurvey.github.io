@@ -32,14 +32,14 @@ source("bootstrap_fc.R")
 
 ## 前言
 
-此網頁是為了[臺灣地區語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)這份問卷而設計的。**臺灣地區語言使用調查**是為了解臺灣各語言的使用情況，特別是華語(國語)以外的弱勢語言；這個網頁則是為了即時將問卷分析結果和大家分享，希望藉此引起大家對臺灣多語社會以及弱勢語言的關注。
+這個網頁根據**[臺灣地區語言使用調查](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)**，呈現臺灣語言使用的情況，並特別聚焦在語言流失的現象。
 
-接下來將透過幾段文字和幾張圖片，描述臺灣語言的現況，並會聚焦在**跨年齡層**以及**跨世代**的語言流失現象。
+希望透過網頁的介紹，能讓大家認識臺灣多語社會的現象，並引起大家對弱勢語言的關注。
 
+<br>
 -------------------
 
-
-## 樣本代表性
+## 樣本
 <br>
 
 ```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
@@ -54,9 +54,9 @@ knitr::include_graphics("./out_graph/sample_spatial_distr.gif")
 </div>
 <div class="col-md-6">
 <br>
-在開始之前，必須提醒讀者注意此網站所依據的資料。由於採用**網路問卷**，此網頁所根據的樣本可能過度集中於單一地區、身份或年齡層。因此，請讀者務必對接下來所見的圖表保持警惕。
+在此需提醒讀者注意網站所依據的資料。由於採用**網路問卷**，因此樣本可能過度集中單一地區、身份或年齡層。
 
-在此，網頁提供了兩張圖表顯示**目前收集之資料**的**地理分佈**以及**性別年齡結構**，希望能讓讀者對資料的來源有個大概的了解。
+我們提供了兩張圖表顯示**目前收集之資料**的**地理分佈**以及**性別年齡結構**，希望讓讀者了解資料組成的概況。
 
 <br>
 
@@ -66,9 +66,6 @@ pl_age_stru
 </div></div>
 
 <br>
-另一方面，我們也希望您能將[此問卷](https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform)分享給其他親朋好友，讓此網頁的根據更有代表性，我們才能說出更可信的故事。
-
-
 
 ------------------
 
@@ -135,7 +132,7 @@ modal(id="lang-map2", modal_header = "語言地圖", modal_body=content)
 
 
 <div class="col-md-5"><br>
-我們可以根據問卷資料繪製出**動態語言地圖**，顯示出臺灣**各地**[^unit]，各語言**在不同年齡層之間消長**的情況。
+我們可以根據問卷資料繪製出**語言地圖**，顯示出臺灣**各地**[^unit]，各語言通行的程度。
 
 一地區中，**懂某語言的人口比例**對於該語言在當地的延續有相當的重要性：
 
@@ -358,9 +355,21 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 -----------------
 
-## 協助我們改進網頁
+## **We Need You**
 <br>
-此網頁在建置之時，可能出現一些錯誤；即使沒有錯誤，也有許多進步的空間。我們相信開源與合作的價值，若您認為有網頁有可進步之處，熟悉 GitHub 者可直接點選網頁上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)並提出 pull request，其他讀者則可透過此 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 提出改進意見。
+
+### 提供建議
+
+我們相信合作的力量，若您發現網頁有錯誤或是可以進步的地方，歡迎大方提出建議：
+
+1. 熟悉 GitHub 者可點選螢幕右上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)，直接修改並提出 pull request
+2. 或是透過 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 填寫建議
+
+### 分享
+
+若您喜歡此網頁，可點選螢幕右上方 <i class="fa fa-share-alt" aria-hidden="true"></i> 將網頁分享至社群網站。
+
+此外，我們也非常缺乏資料。我們誠摯邀請您填寫語言調查 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform" class="btn btn-warning btn-xs" role="button">問卷</a> ，您提供的資料將幫助我們說出更可信的故事。
 
 ---------------------
 
@@ -397,6 +406,6 @@ button_bs("參考資料", class = "default btn-sm btn-gr", data_toggle = "modal"
 
 <br>
 
----------------------
+
 
 ## 附註
