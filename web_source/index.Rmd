@@ -370,7 +370,7 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 ### 提供建議
 
-我們相信合作的力量，若您發現網頁有錯誤或是可以進步的地方，歡迎大方提出建議：
+我們相信眾人的力量，若您發現網頁內容有錯誤或是可以進步的地方，歡迎大方提出建議：
 
 1. 熟悉 GitHub 者可點選螢幕右上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)，直接修改並提出 pull request
 2. 或是透過 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 填寫建議
