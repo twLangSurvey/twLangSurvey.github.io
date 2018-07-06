@@ -27,7 +27,8 @@ Imports:
     geosphere,
     plotly,
     widgetframe,
-    magick
+    magick,
+    tidyverse
 Remotes:
     tidyverse/ggplot2,
     tidyverse/tidyverse,
