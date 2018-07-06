@@ -29,8 +29,6 @@ Imports:
     widgetframe,
     magick
 Remotes:
-    mtennekes/tmap,
-    mtennekes/tmaptools,
     tidyverse/ggplot2,
     tidyverse/tidyverse,
     sjewo/cartogram,
