@@ -31,7 +31,6 @@ Imports:
 Remotes:
     mtennekes/tmap,
     mtennekes/tmaptools,
-    dgrtwo/gganimate,
     tidyverse/ggplot2,
     tidyverse/tidyverse,
     sjewo/cartogram,
