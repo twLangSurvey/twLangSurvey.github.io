@@ -1,4 +1,4 @@
-name: "臺灣語言使用調查"
+name: "main"
 exclude:
   - animate.Rmd
   - '*.csv'
