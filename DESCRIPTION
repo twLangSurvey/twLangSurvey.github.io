@@ -27,7 +27,8 @@ Imports:
     bookdown,
     geosphere,
     plotly,
-    widgetframe
+    widgetframe,
+    magick
 Remotes:
     mtennekes/tmap,
     mtennekes/tmaptools,
