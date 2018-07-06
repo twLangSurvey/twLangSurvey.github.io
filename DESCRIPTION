@@ -31,5 +31,6 @@ Imports:
 Remotes:
     tidyverse/ggplot2,
     tidyverse/tidyverse,
+    dgrtwo/gganimate,
     sjewo/cartogram,
     jannes-m/RQGIS
