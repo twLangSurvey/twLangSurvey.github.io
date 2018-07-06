@@ -9,7 +9,7 @@ before_install:
   - sudo apt-get --yes --force-yes update -qq                          # set up 'sp', 'tmap'dependencies
   - sudo apt-get install --yes libudunits2-dev libproj-dev libgeos-dev libgdal-dev libv8-dev # set up 'sp', 'tmap'dependencies
   - sudo apt-get install --yes libjq-dev libprotobuf-dev libprotoc-dev protobuf-compiler     # set up 'sp', 'tmap'dependencies
-  - sudo apt-get install libmagick++-dev                                # install magick R package dependency
+  #- sudo apt-get install libmagick++-dev                                # install magick R package dependency
   - sudo apt-get install language-pack-zh*                              # install Chinese lang support
   - sudo apt-get install chinese*                                       # install Chinese lang support
   - sudo mkdir /usr/share/fonts/truetype/noto                           # install Chinese font NotoSansCJK TC
