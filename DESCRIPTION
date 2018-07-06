@@ -18,7 +18,6 @@ Imports:
     mapview,
     animation,
     htmltools,
-    tidyverse,
 	cartogram,
     RQGIS,
     RSAGA,
@@ -34,5 +33,6 @@ Remotes:
     mtennekes/tmaptools,
     dgrtwo/gganimate,
     tidyverse/ggplot2,
+    tidyverse/tidyverse,
     sjewo/cartogram,
     jannes-m/RQGIS
