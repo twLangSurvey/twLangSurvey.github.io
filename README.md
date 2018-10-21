@@ -4,8 +4,6 @@
 
 這裡是[臺灣語言使用調查](https://twlangsurvey.github.io/main/)的原始碼，包含資料分析、視覺化以及網頁所需的程式碼。
 
-
-
 若想進一步分析資料，可下載
 
 - [survey.csv](https://github.com/twLangSurvey/main/blob/gh-pages/data/survey.csv)
