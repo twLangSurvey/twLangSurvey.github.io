@@ -3,6 +3,10 @@ language: r
 dist: trusty
 sudo: required
 pandoc_version: 1.19.2.1
+
+cache:
+  packages: yes
+
 before_install:
   - sudo add-apt-repository ppa:ubuntugis/ubuntugis-unstable --yes     # set up 'sp', 'tmap'dependencies
   - sudo add-apt-repository ppa:opencpu/jq --yes                       # set up 'sp', 'tmap'dependencies
@@ -33,9 +37,9 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN  # Set in travis-ci.org dashboard, marked secure
+  github-token: $GH_TOKEN
   keep-history: true
-  local-dir: docs          # Web output directory
+  local-dir: docs
   target-branch: master
   on:
     branch: source
