@@ -6,23 +6,23 @@ navbar:
   title: "臺灣語言使用調查"
   right:
   - icon: fa-edit
-    href: https://github.com/twLangSurvey/main/blob/master/web_source/index.Rmd
+    href: https://github.com/twLangSurvey/twLangSurvey.github.io/blob/master/web_source/index.Rmd
   - icon: fa-github
-    href: https://github.com/twLangSurvey/main
+    href: https://github.com/twLangSurvey/twLangSurvey.github.io
   - icon: fa-share-alt
     menu:
     - icon: fa-facebook-square
       text: "Facebook"
-      href: https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/main/
+      href: https://www.facebook.com/sharer/sharer.php?u=https%3A//twlangsurvey.github.io/
     - icon: fa-google-plus
       text: "Google Plus"
-      href: https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/main/
+      href: https://plus.google.com/share?url=https%3A//twlangsurvey.github.io/
     - icon: fa-twitter
       text: "Twitter"
-      href: https://twitter.com/home?status=https%3A//twlangsurvey.github.io/main/
+      href: https://twitter.com/home?status=https%3A//twlangsurvey.github.io/
     - icon: fa-linkedin
       text: "Linkedin"
-      href: https://www.linkedin.com/shareArticle?mini=true&url=https%3A//twlangsurvey.github.io/main/&title=&summary=&source=
+      href: https://www.linkedin.com/shareArticle?mini=true&url=https%3A//twlangsurvey.github.io/&title=&summary=&source=
   left:
   - icon: fa-home
     href: index.html
