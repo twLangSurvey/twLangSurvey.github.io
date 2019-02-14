@@ -363,31 +363,6 @@ button_bs("族群融合", class = "warning btn-sm btn-gr", data_toggle = "modal"
 
 <br>
 
------------------
-
-## **We Need You**
-<br>
-
-### 提供建議
-
-我們相信眾人的力量，若您發現網頁內容有錯誤或是可以進步的地方，歡迎大方提出建議：
-
-1. 熟悉 GitHub 者可點選螢幕右上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)，直接修改並提出 pull request
-
-1. 或是透過 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 填寫建議
-
-此外，若有其它問題，歡迎透過 [Email](mailto:liao961120@gmail.com) 聯絡我們。
-
-
-### 分享
-
-若您喜歡此網頁，可點選螢幕右上方 <i class="fa fa-share-alt" aria-hidden="true"></i> 將網頁分享至社群網站。
-
-此外，我們也非常缺乏資料(尤其缺乏 30-39 歲的資料)。我們誠摯邀請您填寫語言調查 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform" class="btn btn-warning btn-xs" role="button">問卷</a> ，您提供的資料將幫助我們說出更可信的故事。
-
----------------------
-
-
 ```{r biblo-modal}
 ###### Modal content #######
 content_ref <- HTML('
@@ -418,8 +393,37 @@ modal(id="biblo-modal", modal_header = "參考資料", modal_body=content_ref)
 button_bs("參考資料", class = "default btn-sm btn-gr", data_toggle = "modal", data_target = "#biblo-modal")
 ```
 
+-----------------
+
+## **We Need You**
 <br>
 
+### 提供建議
+
+我們相信眾人的力量，若您發現網頁內容有錯誤或是可以進步的地方，歡迎大方提出建議：
+
+1. 熟悉 GitHub 者可點選螢幕右上方 <i class="fa fa-edit"></i> 查看網頁的原始檔案(`index.Rmd`)，直接修改並提出 pull request
+
+1. 或是透過 [google 表單](https://docs.google.com/forms/d/e/1FAIpQLSeND5U82qxhQDXbJe8D5ouQinvmsphGX_r7qV9MAnxE79uZSA/viewform?usp=sf_link) 填寫建議
+
+
+### 分享
+
+若您喜歡此網頁，可點選螢幕右上方 <i class="fa fa-share-alt" aria-hidden="true"></i> 將網頁分享至社群網站。
+
+此外，我們也非常缺乏資料(尤其缺乏 30-39 歲的資料)。我們誠摯邀請您填寫語言調查 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdrZbbh8XHLYBlLFag8_MGJBtDjvDq-32wwGkvHxYzR2brixg/viewform" class="btn btn-warning btn-xs" role="button">問卷</a> ，您提供的資料將幫助我們說出更可信的故事。
+
+
+---------------------
+
+## 資料與原始碼
+
+這個網頁的原始碼託管於 [GitHub](https://github.com/twLangSurvey/twLangSurvey.github.io)，每週會自動更新一次。  
+問卷調查的資料 可[點此下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/twLangSurvey/twlangsurvey.github.io/blob/master/data/survey.csv) (也是每週更新)，並在[這裡](https://github.com/twLangSurvey/twLangSurvey.github.io/blob/source/README.md)查看變項說明。
+
+若有其它問題，歡迎透過 [Email](mailto:liao961120@gmail.com) 聯絡 [Yongfu Liao](https://liao961120.github.io)。
+
+<br>
 
 
 ## 附註
