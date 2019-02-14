@@ -418,10 +418,9 @@ button_bs("參考資料", class = "default btn-sm btn-gr", data_toggle = "modal"
 
 ## 資料與原始碼
 
-這個網頁的原始碼託管於 [GitHub](https://github.com/twLangSurvey/twLangSurvey.github.io)，每週會自動更新一次。  
-問卷調查資料可[點此下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/twLangSurvey/twlangsurvey.github.io/blob/master/data/survey.csv) (也是每週更新)，並在[這裡](https://github.com/twLangSurvey/twLangSurvey.github.io/blob/source/README.md)查看變項說明。
+這個網頁的原始碼託管於 [GitHub](https://github.com/twLangSurvey/twLangSurvey.github.io)，每週會自動更新一次。問卷調查資料可[點此下載](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/twLangSurvey/twlangsurvey.github.io/blob/master/data/survey.csv) (也是每週更新)，並在[這裡](https://github.com/twLangSurvey/twLangSurvey.github.io/blob/source/README.md)查看變項說明。
 
-若有其它問題，歡迎透過 [Email](mailto:liao961120@gmail.com) 聯絡 [Yongfu Liao](https://liao961120.github.io)。
+若有其它問題，歡迎透過 [Email](mailto:liao961120@gmail.com) 聯絡 [Yongfu Liao](https://liao961120.github.io)
 
 <br>
 
