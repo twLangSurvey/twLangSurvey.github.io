@@ -20,7 +20,8 @@ before_install:
   - sudo chmod 755 /usr/share/fonts/truetype/noto/NotoSansCJKtc.otf     # install Chinese font NotoSansCJK TC
   - fc-cache                                                            # install Chinese font NotoSansCJK TC
   - sudo apt install netcdf-*
-  - R -e 'source("https://install-github.me/r-lib/remotes")'
+
+r_github_packages: r-lib/remotes#340
 
 script:
   - mkdir ./rscript/interactive_graph/
