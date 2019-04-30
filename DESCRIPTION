@@ -21,16 +21,6 @@ Imports:
 	cartogram,
     RQGIS,
     RSAGA,
-    htmlwidgets,
-    kableExtra,
     bookdown,
     geosphere,
-    plotly,
-    widgetframe,
-    magick,
-    tidyverse
-Remotes:
-    tidyverse/ggplot2,
-    tidyverse/tidyverse,
-    sjewo/cartogram,
-    jannes-m/RQGIS
+    magick
