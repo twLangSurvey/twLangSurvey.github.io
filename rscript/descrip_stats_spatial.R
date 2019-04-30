@@ -54,7 +54,7 @@ pl_samp_distr <- ggplot()+
     scale_y_continuous(limits = c(21.65, 26.22),#c(21.8, 25.4),
                        breaks = 0) +
     scale_fill_gradientn(colours = palette, 
-                         limits=c(0, 30))+
+                         limits=c(0, max(survey_distr$`樣本數`)))+
     theme(strip.text.x = element_text(size = 22),
           legend.title = element_text(size = 25),
           plot.caption = element_text(size = 25, 
