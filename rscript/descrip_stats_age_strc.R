@@ -29,7 +29,7 @@ pl_age_stru <- ggplot(survey, aes(x = age_group,
              width = 0.7) +
     coord_flip() +
     scale_y_continuous(
-        limits = c(-300, 300),
+        #limits = c(-300, 300),
         breaks = seq(-300, 300, 15),
         labels= abs(seq(-300, 300, 15))
     ) +
