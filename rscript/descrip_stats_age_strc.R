@@ -15,7 +15,7 @@ survey <- readr::read_rds("./data/survey.rds") %>%
 male_n <- survey$`n()`[survey$gender == "男"] %>% sum()
 female_n <- survey$`n()`[survey$gender == "女"] %>% sum()
 max_n <- survey$`n()` %>% max()
-max_n = ceiling(max_n/100)*100
+max_n = ceiling(max_n/10)*10
 
 
 pl_age_stru <- ggplot(survey, aes(x = age_group,
@@ -39,7 +39,7 @@ pl_age_stru <- ggplot(survey, aes(x = age_group,
         labels = c("女", "男")
     ) +
     theme_bw() +
-    theme(axis.text = element_text(size = 20),
+    theme(axis.text = element_text(size = 17),
           title = element_text(size = 19),
           axis.title = element_text(size = 20),
           plot.title = element_text(size = 25,
