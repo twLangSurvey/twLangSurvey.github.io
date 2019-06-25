@@ -43,7 +43,7 @@ library(knitr)
 ## 樣本
 <br>
 
-```{r message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+```{r source-ploting, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 source("descrip_stats_age_strc.R")
 ```
 
@@ -57,7 +57,7 @@ source("descrip_stats_age_strc.R")
 
 <br>
 
-```{r }
+```{r pl_age_stru}
 pl_age_stru
 ```
 </div></div>
