@@ -15,7 +15,7 @@ survey <- readr::read_rds("./data/survey.rds") %>%
 male_n <- survey$`n()`[survey$gender == "男"] %>% sum()
 female_n <- survey$`n()`[survey$gender == "女"] %>% sum()
 max_n <- survey$`n()` %>% max()
-
+max_n = ceiling(max_n/100)*100
 
 
 pl_age_stru <- ggplot(survey, aes(x = age_group,
@@ -29,9 +29,9 @@ pl_age_stru <- ggplot(survey, aes(x = age_group,
              width = 0.7) +
     coord_flip() +
     scale_y_continuous(
-        #limits = c(-300, 300),
-        breaks = seq(-300, 300, 15),
-        labels= abs(seq(-300, 300, 15))
+        limits = c(-max_n, max_n),
+        breaks = seq(-max_n, max_n, 10),
+        labels= abs(seq(-max_n, max_n, 10))
     ) +
     scale_fill_manual(
         values = c("#E41A1C", "#377EB8"), #get_brewer_pal("Set1", 2)
